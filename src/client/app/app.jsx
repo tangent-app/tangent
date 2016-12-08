@@ -38,6 +38,6 @@ const styles = {
 
 render((<Router history={ browserHistory }>
         <Route path="/" component={ App } />
-        <Route path="login" component={ Login } />
-        <Route path="signup" component={ Signup } />
+        <Route path="/login" component={ Login } />
+        <Route path="/signup" component={ Signup } />
       </Router>), document.getElementById('main'));

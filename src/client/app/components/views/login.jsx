@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import axios from 'axios';
 
 class Login extends Component {
   constructor(props) {
@@ -25,7 +26,13 @@ class Login extends Component {
 
   _handleClick(e) {
     e.preventDefault();
-    console.log(this.state);
+    axios.get('/api/signin')
+    .then(function(res) {
+      console.log('res', res);
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
   }
 
   render() {

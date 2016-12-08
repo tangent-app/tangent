@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jyoon006/tangent#readme",
   "dependencies": {
+    "axios": "^0.15.3",
     "babel": "^6.5.2",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
@@ -26,6 +27,7 @@
     "babel-preset-react": "^6.16.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "mongoose": "^4.7.2",
     "morgan": "^1.7.0",
     "path": "^0.12.7",
     "react": "^15.4.1",
