@@ -31,17 +31,38 @@ class Login extends Component {
   render() {
     return (
       <div style={ styles.container }>
-        <div style={ styles.smContainer } >
-          <button style={ styles.smButton }> Google Signin</button>
-          <button style={ styles.smButton }> Facebook Signin</button>
+        <div style={ styles.signinContainer } >
+          <div style={ styles.signinIconContainer }>
+            <i className="fa fa-user-circle-o" style={ styles.signinIcon } aria-hidden="true"></i>
+          </div>
+          <div>
+            <form style={ styles.form }>
+              <div>
+                <i style={ styles.inputIcon } className="fa fa-user" aria-hidden="true"></i>
+                <input type="text" name="username" style={ styles.input } placeholder="username" onChange={ this._handleChange } />
+              </div>
+              <div>
+                <i style={ styles.inputIcon }className="fa fa-lock" aria-hidden="true"></i>
+                <input type="text" name="password" style={ styles.input } placeholder="password" onChange={ this._handleChange } />
+              </div>
+                
+                <button type="submit" value="Submit" style={ styles.button } onClick={ this._handleClick }>Login</button>
+            </form>
+          </div>
+          <div style={ styles.smContainer } >
+            <button style={ styles.smButton }>
+              <span style={ styles.smButtonIcon }><i className="fa fa-google" aria-hidden="true"></i></span> 
+              Google Signin
+            </button>
+       
+            
+            <button style={ styles.smButton }>
+              <span style={ styles.smButtonIcon }><i className="fa fa-facebook" aria-hidden="true"></i></span> 
+              Facebook Signin
+            </button>
+          </div>
+
         </div>
-        <div>
-          <form style={ styles.form }>
-              <input type="text" name="username" style={ styles.input } placeholder="username" onChange={ this._handleChange } />
-              <input type="text" name="password" style={ styles.input } placeholder="password" onChange={ this._handleChange } />
-              <button type="submit" value="Submit" style={ styles.button } onClick={ this._handleClick }>Login</button>
-          </form>
-        </div>  
       </div>     
     )
   }
@@ -56,16 +77,40 @@ const styles = {
   },
   smContainer: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    margin: '20px 0 25px 0',
-    width: '50vw'
+    margin: '120px 0 25px 0',
+    width: '32vw'
   },
   smButton: {
-    width: '20vw',
+    width: '24vw',
     height: '30px',
-    fontSize: '18px'
+    fontSize: '12px',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    marginBottom: '20px'
+  },
+  smButtonIcon: {
+    marginRight: '5px'
+  },
+  signinContainer: {
+    width: '32vw',
+    height: '600px',
+    border: '1px solid #C7C9C7',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#E8EAE8'
+  },
+  signinIconContainer: {
+    margin: '0 0 30px 0',
+  },
+  signinIcon: {
+    color: '#7aacd2',
+    fontSize: '7em'
   },
   form: {
     display: 'flex',
@@ -75,14 +120,18 @@ const styles = {
   },
   input: {
     marginBottom: '15px',
-    width: '50vw',
-    height: '30px',
-    fontSize: '24px'
+    width: '24vw',
+    height: '20px',
+    fontSize: '14px'
+  },
+  inputIcon: {
+    marginRight: '5px',
+    color: '#7aacd2'
   },
   button: {
-    width: '50vw',
+    width: '24vw',
     height: '30px',
-    fontSize: '16px'
+    fontSize: '14px'
   }
 }
 

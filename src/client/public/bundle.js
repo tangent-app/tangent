@@ -27213,30 +27213,59 @@
 	        { style: styles.container },
 	        _react2.default.createElement(
 	          'div',
-	          { style: styles.smContainer },
+	          { style: styles.signinContainer },
 	          _react2.default.createElement(
-	            'button',
-	            { style: styles.smButton },
-	            ' Google Signin'
+	            'div',
+	            { style: styles.signinIconContainer },
+	            _react2.default.createElement('i', { className: 'fa fa-user-circle-o', style: styles.signinIcon, 'aria-hidden': 'true' })
 	          ),
 	          _react2.default.createElement(
-	            'button',
-	            { style: styles.smButton },
-	            ' Facebook Signin'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          null,
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'form',
+	              { style: styles.form },
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement('i', { style: styles.inputIcon, className: 'fa fa-user', 'aria-hidden': 'true' }),
+	                _react2.default.createElement('input', { type: 'text', name: 'username', style: styles.input, placeholder: 'username', onChange: this._handleChange })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement('i', { style: styles.inputIcon, className: 'fa fa-lock', 'aria-hidden': 'true' }),
+	                _react2.default.createElement('input', { type: 'text', name: 'password', style: styles.input, placeholder: 'password', onChange: this._handleChange })
+	              ),
+	              _react2.default.createElement(
+	                'button',
+	                { type: 'submit', value: 'Submit', style: styles.button, onClick: this._handleClick },
+	                'Login'
+	              )
+	            )
+	          ),
 	          _react2.default.createElement(
-	            'form',
-	            { style: styles.form },
-	            _react2.default.createElement('input', { type: 'text', name: 'username', style: styles.input, placeholder: 'username', onChange: this._handleChange }),
-	            _react2.default.createElement('input', { type: 'text', name: 'password', style: styles.input, placeholder: 'password', onChange: this._handleChange }),
+	            'div',
+	            { style: styles.smContainer },
 	            _react2.default.createElement(
 	              'button',
-	              { type: 'submit', value: 'Submit', style: styles.button, onClick: this._handleClick },
-	              'Login'
+	              { style: styles.smButton },
+	              _react2.default.createElement(
+	                'span',
+	                { style: styles.smButtonIcon },
+	                _react2.default.createElement('i', { className: 'fa fa-google', 'aria-hidden': 'true' })
+	              ),
+	              'Google Signin'
+	            ),
+	            _react2.default.createElement(
+	              'button',
+	              { style: styles.smButton },
+	              _react2.default.createElement(
+	                'span',
+	                { style: styles.smButtonIcon },
+	                _react2.default.createElement('i', { className: 'fa fa-facebook', 'aria-hidden': 'true' })
+	              ),
+	              'Facebook Signin'
 	            )
 	          )
 	        )
@@ -27256,16 +27285,40 @@
 	  },
 	  smContainer: {
 	    display: 'flex',
-	    flexDirection: 'row',
+	    flexDirection: 'column',
 	    justifyContent: 'space-around',
 	    alignItems: 'center',
-	    margin: '20px 0 25px 0',
-	    width: '50vw'
+	    margin: '120px 0 25px 0',
+	    width: '32vw'
 	  },
 	  smButton: {
-	    width: '20vw',
+	    width: '24vw',
 	    height: '30px',
-	    fontSize: '18px'
+	    fontSize: '12px',
+	    display: 'flex',
+	    justifyContent: 'flex-start',
+	    alignItems: 'center',
+	    marginBottom: '20px'
+	  },
+	  smButtonIcon: {
+	    marginRight: '5px'
+	  },
+	  signinContainer: {
+	    width: '32vw',
+	    height: '600px',
+	    border: '1px solid #C7C9C7',
+	    display: 'flex',
+	    flexDirection: 'column',
+	    justifyContent: 'center',
+	    alignItems: 'center',
+	    backgroundColor: '#E8EAE8'
+	  },
+	  signinIconContainer: {
+	    margin: '0 0 30px 0'
+	  },
+	  signinIcon: {
+	    color: '#7aacd2',
+	    fontSize: '7em'
 	  },
 	  form: {
 	    display: 'flex',
@@ -27275,14 +27328,18 @@
 	  },
 	  input: {
 	    marginBottom: '15px',
-	    width: '50vw',
-	    height: '30px',
-	    fontSize: '24px'
+	    width: '24vw',
+	    height: '20px',
+	    fontSize: '14px'
+	  },
+	  inputIcon: {
+	    marginRight: '5px',
+	    color: '#7aacd2'
 	  },
 	  button: {
-	    width: '50vw',
+	    width: '24vw',
 	    height: '30px',
-	    fontSize: '16px'
+	    fontSize: '14px'
 	  }
 	};
 	

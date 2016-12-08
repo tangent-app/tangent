@@ -13,9 +13,9 @@ var config = {
   module : {
     loaders : [
       { test : /\.jsx?/, include : APP_DIR, loader : 'babel' },
+      { test: /\.js$/, include : APP_DIR, loader : 'babel-loader', exclude: /node_modules/ },
       { test: /\.json$/, loader: 'json-loader' },
-      { test: /\.html$/, loader: "raw-loader" },
-      { test: /\.js$/, include : APP_DIR, loader : 'babel-loader', exclude: /node_modules/ }
+      { test: /\.html$/, loader: "raw-loader" },  
     ]
   }
 };
