@@ -27207,6 +27207,7 @@
 	    key: '_handleClick',
 	    value: function _handleClick(e) {
 	      e.preventDefault();
+	      console.log(this.state);
 	      _axios2.default.get('/api/signin').then(function (res) {
 	        console.log('res', res);
 	      }).catch(function (err) {
@@ -27237,13 +27238,13 @@
 	                'div',
 	                { className: 'login-input-container' },
 	                _react2.default.createElement('i', { className: 'fa fa-user login-input-icon', 'aria-hidden': 'true' }),
-	                _react2.default.createElement('input', { className: 'login-input', type: 'text', name: 'username', placeholder: 'username', onChange: this._handleChange })
+	                _react2.default.createElement('input', { className: 'login-input', value: this.state.username, type: 'text', name: 'username', placeholder: 'username', onChange: this._handleChange })
 	              ),
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'login-input-container' },
 	                _react2.default.createElement('i', { className: 'fa fa-lock login-input-icon', 'aria-hidden': 'true' }),
-	                _react2.default.createElement('input', { className: 'login-input', type: 'text', name: 'password', placeholder: 'password', onChange: this._handleChange })
+	                _react2.default.createElement('input', { className: 'login-input', value: this.state.password, type: 'text', name: 'password', placeholder: 'password', onChange: this._handleChange })
 	              ),
 	              _react2.default.createElement(
 	                'div',
@@ -27257,7 +27258,7 @@
 	            { className: 'oauth-container' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'btn-google' },
+	              { className: 'btn-google', name: 'google' },
 	              _react2.default.createElement(
 	                'span',
 	                { className: 'oauth-btn-icon' },
@@ -27265,12 +27266,16 @@
 	              )
 	            ),
 	            _react2.default.createElement(
-	              'div',
-	              { className: 'btn-fb' },
+	              'a',
+	              { href: '/login/facebook' },
 	              _react2.default.createElement(
-	                'span',
-	                { className: 'oauth-btn-icon' },
-	                _react2.default.createElement('i', { className: 'fa fa-facebook', 'aria-hidden': 'true' })
+	                'div',
+	                { className: 'btn-fb', name: 'facebook' },
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'oauth-btn-icon' },
+	                  _react2.default.createElement('i', { className: 'fa fa-facebook', 'aria-hidden': 'true' })
+	                )
 	              )
 	            )
 	          )

@@ -58,6 +58,7 @@ html, body {
 
 .oauth-btn-icon {
   margin-right: 5px;
+  color: white;
 }
 
 .login-container {
@@ -101,7 +102,7 @@ html, body {
 
 .login-input {
   margin-bottom: 15px;
-  padding-left: 15px;
+  padding-left: 17px;
   min-width: 180px;
   max-width: 24vw;
   width: 24vw;
@@ -119,6 +120,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 170px;
   width: 24vw;
   height: 30px;
   font-size: 16px;
