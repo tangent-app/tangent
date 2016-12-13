@@ -63,7 +63,7 @@
 	
 	var _login2 = _interopRequireDefault(_login);
 	
-	var _signup = __webpack_require__(/*! ./components/views/signup.jsx */ 234);
+	var _signup = __webpack_require__(/*! ./components/views/signup.jsx */ 259);
 	
 	var _signup2 = _interopRequireDefault(_signup);
 	
@@ -27164,7 +27164,7 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
-	var _axios = __webpack_require__(/*! axios */ 235);
+	var _axios = __webpack_require__(/*! axios */ 234);
 	
 	var _axios2 = _interopRequireDefault(_axios);
 	
@@ -27218,62 +27218,60 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { style: styles.container },
+	        { className: 'login-main-container' },
 	        _react2.default.createElement(
 	          'div',
-	          { style: styles.signinContainer },
+	          { className: 'login-container' },
 	          _react2.default.createElement(
 	            'div',
-	            { style: styles.signinIconContainer },
-	            _react2.default.createElement('i', { className: 'fa fa-user-circle-o', style: styles.signinIcon, 'aria-hidden': 'true' })
+	            { className: 'login-icon-container' },
+	            _react2.default.createElement('i', { className: 'fa fa-user-circle-o login-icon', 'aria-hidden': 'true' })
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            null,
+	            { className: 'login-form-container' },
 	            _react2.default.createElement(
 	              'form',
-	              { style: styles.form },
+	              { className: 'login-form' },
 	              _react2.default.createElement(
 	                'div',
-	                null,
-	                _react2.default.createElement('i', { style: styles.inputIcon, className: 'fa fa-user', 'aria-hidden': 'true' }),
-	                _react2.default.createElement('input', { type: 'text', name: 'username', style: styles.input, placeholder: 'username', onChange: this._handleChange })
+	                { className: 'login-input-container' },
+	                _react2.default.createElement('i', { className: 'fa fa-user login-input-icon', 'aria-hidden': 'true' }),
+	                _react2.default.createElement('input', { className: 'login-input', type: 'text', name: 'username', placeholder: 'username', onChange: this._handleChange })
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                null,
-	                _react2.default.createElement('i', { style: styles.inputIcon, className: 'fa fa-lock', 'aria-hidden': 'true' }),
-	                _react2.default.createElement('input', { type: 'text', name: 'password', style: styles.input, placeholder: 'password', onChange: this._handleChange })
+	                { className: 'login-input-container' },
+	                _react2.default.createElement('i', { className: 'fa fa-lock login-input-icon', 'aria-hidden': 'true' }),
+	                _react2.default.createElement('input', { className: 'login-input', type: 'text', name: 'password', placeholder: 'password', onChange: this._handleChange })
 	              ),
 	              _react2.default.createElement(
-	                'button',
-	                { type: 'submit', value: 'Submit', style: styles.button, onClick: this._handleClick },
+	                'div',
+	                { className: 'login-btn', type: 'submit', value: 'Submit', onClick: this._handleClick },
 	                'Login'
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { style: styles.smContainer },
+	            { className: 'oauth-container' },
 	            _react2.default.createElement(
-	              'button',
-	              { style: styles.smButton },
+	              'div',
+	              { className: 'btn-google' },
 	              _react2.default.createElement(
 	                'span',
-	                { style: styles.smButtonIcon },
-	                _react2.default.createElement('i', { className: 'fa fa-google', 'aria-hidden': 'true' })
-	              ),
-	              'Google Signin'
+	                { className: 'oauth-btn-icon' },
+	                _react2.default.createElement('i', { className: 'fa fa-google-plus', 'aria-hidden': 'true' })
+	              )
 	            ),
 	            _react2.default.createElement(
-	              'button',
-	              { style: styles.smButton },
+	              'div',
+	              { className: 'btn-fb' },
 	              _react2.default.createElement(
 	                'span',
-	                { style: styles.smButtonIcon },
+	                { className: 'oauth-btn-icon' },
 	                _react2.default.createElement('i', { className: 'fa fa-facebook', 'aria-hidden': 'true' })
-	              ),
-	              'Facebook Signin'
+	              )
 	            )
 	          )
 	        )
@@ -27284,140 +27282,19 @@
 	  return Login;
 	}(_react.Component);
 	
-	var styles = {
-	  container: {
-	    display: 'flex',
-	    flexDirection: 'column',
-	    justifyContent: 'space-between',
-	    alignItems: 'center'
-	  },
-	  smContainer: {
-	    display: 'flex',
-	    flexDirection: 'column',
-	    justifyContent: 'space-around',
-	    alignItems: 'center',
-	    margin: '120px 0 25px 0',
-	    width: '32vw'
-	  },
-	  smButton: {
-	    width: '24vw',
-	    height: '30px',
-	    fontSize: '12px',
-	    display: 'flex',
-	    justifyContent: 'flex-start',
-	    alignItems: 'center',
-	    marginBottom: '20px'
-	  },
-	  smButtonIcon: {
-	    marginRight: '5px'
-	  },
-	  signinContainer: {
-	    width: '32vw',
-	    height: '600px',
-	    border: '1px solid #C7C9C7',
-	    display: 'flex',
-	    flexDirection: 'column',
-	    justifyContent: 'center',
-	    alignItems: 'center',
-	    backgroundColor: '#E8EAE8'
-	  },
-	  signinIconContainer: {
-	    margin: '0 0 30px 0'
-	  },
-	  signinIcon: {
-	    color: '#7aacd2',
-	    fontSize: '7em'
-	  },
-	  form: {
-	    display: 'flex',
-	    flexDirection: 'column',
-	    justifyContent: 'space-between',
-	    alignItems: 'center'
-	  },
-	  input: {
-	    marginBottom: '15px',
-	    width: '24vw',
-	    height: '20px',
-	    fontSize: '14px'
-	  },
-	  inputIcon: {
-	    marginRight: '5px',
-	    color: '#7aacd2'
-	  },
-	  button: {
-	    width: '24vw',
-	    height: '30px',
-	    fontSize: '14px'
-	  }
-	};
-	
 	exports.default = Login;
 
 /***/ },
 /* 234 */
-/*!****************************************************!*\
-  !*** ./src/client/app/components/views/signup.jsx ***!
-  \****************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(/*! react-dom */ 32);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Signup = function (_Component) {
-	  _inherits(Signup, _Component);
-	
-	  function Signup() {
-	    _classCallCheck(this, Signup);
-	
-	    return _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).apply(this, arguments));
-	  }
-	
-	  _createClass(Signup, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'h3',
-	        null,
-	        'Sign up Page'
-	      );
-	    }
-	  }]);
-	
-	  return Signup;
-	}(_react.Component);
-	
-	exports.default = Signup;
-
-/***/ },
-/* 235 */
 /*!**************************!*\
   !*** ./~/axios/index.js ***!
   \**************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(/*! ./lib/axios */ 236);
+	module.exports = __webpack_require__(/*! ./lib/axios */ 235);
 
 /***/ },
-/* 236 */
+/* 235 */
 /*!******************************!*\
   !*** ./~/axios/lib/axios.js ***!
   \******************************/
@@ -27425,10 +27302,10 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./utils */ 237);
-	var bind = __webpack_require__(/*! ./helpers/bind */ 238);
-	var Axios = __webpack_require__(/*! ./core/Axios */ 239);
-	var defaults = __webpack_require__(/*! ./defaults */ 240);
+	var utils = __webpack_require__(/*! ./utils */ 236);
+	var bind = __webpack_require__(/*! ./helpers/bind */ 237);
+	var Axios = __webpack_require__(/*! ./core/Axios */ 238);
+	var defaults = __webpack_require__(/*! ./defaults */ 239);
 	
 	/**
 	 * Create an instance of Axios
@@ -27461,15 +27338,15 @@
 	};
 	
 	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(/*! ./cancel/Cancel */ 257);
-	axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ 258);
-	axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ 254);
+	axios.Cancel = __webpack_require__(/*! ./cancel/Cancel */ 256);
+	axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ 257);
+	axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ 253);
 	
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(/*! ./helpers/spread */ 259);
+	axios.spread = __webpack_require__(/*! ./helpers/spread */ 258);
 	
 	module.exports = axios;
 	
@@ -27478,7 +27355,7 @@
 
 
 /***/ },
-/* 237 */
+/* 236 */
 /*!******************************!*\
   !*** ./~/axios/lib/utils.js ***!
   \******************************/
@@ -27486,7 +27363,7 @@
 
 	'use strict';
 	
-	var bind = __webpack_require__(/*! ./helpers/bind */ 238);
+	var bind = __webpack_require__(/*! ./helpers/bind */ 237);
 	
 	/*global toString:true*/
 	
@@ -27786,7 +27663,7 @@
 
 
 /***/ },
-/* 238 */
+/* 237 */
 /*!*************************************!*\
   !*** ./~/axios/lib/helpers/bind.js ***!
   \*************************************/
@@ -27806,7 +27683,7 @@
 
 
 /***/ },
-/* 239 */
+/* 238 */
 /*!***********************************!*\
   !*** ./~/axios/lib/core/Axios.js ***!
   \***********************************/
@@ -27814,12 +27691,12 @@
 
 	'use strict';
 	
-	var defaults = __webpack_require__(/*! ./../defaults */ 240);
-	var utils = __webpack_require__(/*! ./../utils */ 237);
-	var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ 251);
-	var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ 252);
-	var isAbsoluteURL = __webpack_require__(/*! ./../helpers/isAbsoluteURL */ 255);
-	var combineURLs = __webpack_require__(/*! ./../helpers/combineURLs */ 256);
+	var defaults = __webpack_require__(/*! ./../defaults */ 239);
+	var utils = __webpack_require__(/*! ./../utils */ 236);
+	var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ 250);
+	var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ 251);
+	var isAbsoluteURL = __webpack_require__(/*! ./../helpers/isAbsoluteURL */ 254);
+	var combineURLs = __webpack_require__(/*! ./../helpers/combineURLs */ 255);
 	
 	/**
 	 * Create a new instance of Axios
@@ -27900,7 +27777,7 @@
 
 
 /***/ },
-/* 240 */
+/* 239 */
 /*!*********************************!*\
   !*** ./~/axios/lib/defaults.js ***!
   \*********************************/
@@ -27908,8 +27785,8 @@
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 	
-	var utils = __webpack_require__(/*! ./utils */ 237);
-	var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ 241);
+	var utils = __webpack_require__(/*! ./utils */ 236);
+	var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ 240);
 	
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -27926,10 +27803,10 @@
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(/*! ./adapters/xhr */ 242);
+	    adapter = __webpack_require__(/*! ./adapters/xhr */ 241);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(/*! ./adapters/http */ 242);
+	    adapter = __webpack_require__(/*! ./adapters/http */ 241);
 	  }
 	  return adapter;
 	}
@@ -28003,7 +27880,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
-/* 241 */
+/* 240 */
 /*!****************************************************!*\
   !*** ./~/axios/lib/helpers/normalizeHeaderName.js ***!
   \****************************************************/
@@ -28011,7 +27888,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ../utils */ 237);
+	var utils = __webpack_require__(/*! ../utils */ 236);
 	
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -28024,7 +27901,7 @@
 
 
 /***/ },
-/* 242 */
+/* 241 */
 /*!*************************************!*\
   !*** ./~/axios/lib/adapters/xhr.js ***!
   \*************************************/
@@ -28032,13 +27909,13 @@
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
-	var settle = __webpack_require__(/*! ./../core/settle */ 243);
-	var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ 246);
-	var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ 247);
-	var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ 248);
-	var createError = __webpack_require__(/*! ../core/createError */ 244);
-	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(/*! ./../helpers/btoa */ 249);
+	var utils = __webpack_require__(/*! ./../utils */ 236);
+	var settle = __webpack_require__(/*! ./../core/settle */ 242);
+	var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ 245);
+	var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ 246);
+	var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ 247);
+	var createError = __webpack_require__(/*! ../core/createError */ 243);
+	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(/*! ./../helpers/btoa */ 248);
 	
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -28134,7 +28011,7 @@
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(/*! ./../helpers/cookies */ 250);
+	      var cookies = __webpack_require__(/*! ./../helpers/cookies */ 249);
 	
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -28211,7 +28088,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
-/* 243 */
+/* 242 */
 /*!************************************!*\
   !*** ./~/axios/lib/core/settle.js ***!
   \************************************/
@@ -28219,7 +28096,7 @@
 
 	'use strict';
 	
-	var createError = __webpack_require__(/*! ./createError */ 244);
+	var createError = __webpack_require__(/*! ./createError */ 243);
 	
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -28245,7 +28122,7 @@
 
 
 /***/ },
-/* 244 */
+/* 243 */
 /*!*****************************************!*\
   !*** ./~/axios/lib/core/createError.js ***!
   \*****************************************/
@@ -28253,7 +28130,7 @@
 
 	'use strict';
 	
-	var enhanceError = __webpack_require__(/*! ./enhanceError */ 245);
+	var enhanceError = __webpack_require__(/*! ./enhanceError */ 244);
 	
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -28271,7 +28148,7 @@
 
 
 /***/ },
-/* 245 */
+/* 244 */
 /*!******************************************!*\
   !*** ./~/axios/lib/core/enhanceError.js ***!
   \******************************************/
@@ -28299,7 +28176,7 @@
 
 
 /***/ },
-/* 246 */
+/* 245 */
 /*!*****************************************!*\
   !*** ./~/axios/lib/helpers/buildURL.js ***!
   \*****************************************/
@@ -28307,7 +28184,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 236);
 	
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -28376,7 +28253,7 @@
 
 
 /***/ },
-/* 247 */
+/* 246 */
 /*!*********************************************!*\
   !*** ./~/axios/lib/helpers/parseHeaders.js ***!
   \*********************************************/
@@ -28384,7 +28261,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 236);
 	
 	/**
 	 * Parse headers into an object
@@ -28422,7 +28299,7 @@
 
 
 /***/ },
-/* 248 */
+/* 247 */
 /*!************************************************!*\
   !*** ./~/axios/lib/helpers/isURLSameOrigin.js ***!
   \************************************************/
@@ -28430,7 +28307,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 236);
 	
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -28499,7 +28376,7 @@
 
 
 /***/ },
-/* 249 */
+/* 248 */
 /*!*************************************!*\
   !*** ./~/axios/lib/helpers/btoa.js ***!
   \*************************************/
@@ -28544,7 +28421,7 @@
 
 
 /***/ },
-/* 250 */
+/* 249 */
 /*!****************************************!*\
   !*** ./~/axios/lib/helpers/cookies.js ***!
   \****************************************/
@@ -28552,7 +28429,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 236);
 	
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -28606,7 +28483,7 @@
 
 
 /***/ },
-/* 251 */
+/* 250 */
 /*!************************************************!*\
   !*** ./~/axios/lib/core/InterceptorManager.js ***!
   \************************************************/
@@ -28614,7 +28491,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 236);
 	
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -28667,7 +28544,7 @@
 
 
 /***/ },
-/* 252 */
+/* 251 */
 /*!*********************************************!*\
   !*** ./~/axios/lib/core/dispatchRequest.js ***!
   \*********************************************/
@@ -28675,10 +28552,10 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
-	var transformData = __webpack_require__(/*! ./transformData */ 253);
-	var isCancel = __webpack_require__(/*! ../cancel/isCancel */ 254);
-	var defaults = __webpack_require__(/*! ../defaults */ 240);
+	var utils = __webpack_require__(/*! ./../utils */ 236);
+	var transformData = __webpack_require__(/*! ./transformData */ 252);
+	var isCancel = __webpack_require__(/*! ../cancel/isCancel */ 253);
+	var defaults = __webpack_require__(/*! ../defaults */ 239);
 	
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -28755,7 +28632,7 @@
 
 
 /***/ },
-/* 253 */
+/* 252 */
 /*!*******************************************!*\
   !*** ./~/axios/lib/core/transformData.js ***!
   \*******************************************/
@@ -28763,7 +28640,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 236);
 	
 	/**
 	 * Transform the data for a request or a response
@@ -28784,7 +28661,7 @@
 
 
 /***/ },
-/* 254 */
+/* 253 */
 /*!****************************************!*\
   !*** ./~/axios/lib/cancel/isCancel.js ***!
   \****************************************/
@@ -28798,7 +28675,7 @@
 
 
 /***/ },
-/* 255 */
+/* 254 */
 /*!**********************************************!*\
   !*** ./~/axios/lib/helpers/isAbsoluteURL.js ***!
   \**********************************************/
@@ -28821,7 +28698,7 @@
 
 
 /***/ },
-/* 256 */
+/* 255 */
 /*!********************************************!*\
   !*** ./~/axios/lib/helpers/combineURLs.js ***!
   \********************************************/
@@ -28842,7 +28719,7 @@
 
 
 /***/ },
-/* 257 */
+/* 256 */
 /*!**************************************!*\
   !*** ./~/axios/lib/cancel/Cancel.js ***!
   \**************************************/
@@ -28870,7 +28747,7 @@
 
 
 /***/ },
-/* 258 */
+/* 257 */
 /*!*******************************************!*\
   !*** ./~/axios/lib/cancel/CancelToken.js ***!
   \*******************************************/
@@ -28878,7 +28755,7 @@
 
 	'use strict';
 	
-	var Cancel = __webpack_require__(/*! ./Cancel */ 257);
+	var Cancel = __webpack_require__(/*! ./Cancel */ 256);
 	
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -28936,7 +28813,7 @@
 
 
 /***/ },
-/* 259 */
+/* 258 */
 /*!***************************************!*\
   !*** ./~/axios/lib/helpers/spread.js ***!
   \***************************************/
@@ -28970,6 +28847,60 @@
 	  };
 	};
 
+
+/***/ },
+/* 259 */
+/*!****************************************************!*\
+  !*** ./src/client/app/components/views/signup.jsx ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(/*! react-dom */ 32);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Signup = function (_Component) {
+	  _inherits(Signup, _Component);
+	
+	  function Signup() {
+	    _classCallCheck(this, Signup);
+	
+	    return _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).apply(this, arguments));
+	  }
+	
+	  _createClass(Signup, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'h3',
+	        null,
+	        'Sign up Page'
+	      );
+	    }
+	  }]);
+	
+	  return Signup;
+	}(_react.Component);
+	
+	exports.default = Signup;
 
 /***/ }
 /******/ ]);

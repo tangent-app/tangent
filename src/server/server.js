@@ -26,3 +26,7 @@ routes(app, express);
 app.get('*', function (req, res){
   res.sendFile(path.resolve(__dirname, '../client', 'index.html'))
 });
+
+
+//fb color #3b5998
+//google color #d14836
