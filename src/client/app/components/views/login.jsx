@@ -38,22 +38,22 @@ class Login extends Component {
 
   render() {
     return (
-      <div className='login-main-container' >
-        <div className='login-container' >
-          <div className='login-icon-container'>
-            <i className="fa fa-user-circle-o login-icon" aria-hidden="true"></i>
+      <div className='register-main-container' >
+        <div className='register-container' >
+          <div className='register-icon-container'>
+            <i className="fa fa-user-circle-o register-icon" aria-hidden="true"></i>
           </div>
-          <div className='login-form-container'>
-            <form className='login-form' >
-              <div className='login-input-container'>
-                <i className="fa fa-user login-input-icon" aria-hidden="true"></i>
-                <input className='login-input' value={ this.state.username } type="text" name="username" placeholder="username" onChange={ this._handleChange } />
+          <div className='register-form-container'>
+            <form className='register-form' >
+              <div className='register-input-container'>
+                <i className="fa fa-user register-input-icon" aria-hidden="true"></i>
+                <input className='register-input' value={ this.state.username } type="text" name="username" placeholder="username" onChange={ this._handleChange } />
               </div>
-              <div className='login-input-container'>
-                <i className="fa fa-lock login-input-icon" aria-hidden="true"></i>
-                <input className='login-input' value={ this.state.password } type="text" name="password" placeholder="password" onChange={ this._handleChange } />
+              <div className='register-input-container'>
+                <i className="fa fa-lock register-input-icon" aria-hidden="true"></i>
+                <input className='register-input' value={ this.state.password } type="text" name="password" placeholder="password" onChange={ this._handleChange } />
               </div>
-                <div className='login-btn' type="submit" value="Submit" onClick={ this._handleClick }>Login</div>
+                <div className='register-btn' type="submit" value="Submit" onClick={ this._handleClick }>Login</div>
             </form>
           </div>
           <div className='oauth-container'>
@@ -66,7 +66,9 @@ class Login extends Component {
               
             </div></a>
           </div>
-
+          <div className='register-footer'>
+            <div className='register-footer-text'>Dont have an account? <a href='/signup' className='footer-link'>Sign up!</a></div>
+          </div>
         </div>
       </div>     
     )

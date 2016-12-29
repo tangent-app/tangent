@@ -4,4 +4,4 @@ node_modules
 
 src/server/config
 
-src/public
+src/client/public

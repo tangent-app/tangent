@@ -7,6 +7,7 @@ var Users = new Schema({
   email: String,
   username: String,
   password: String,
+  oauth_id: String
 });
 
 module.exports = mongoose.model('Users', Users);

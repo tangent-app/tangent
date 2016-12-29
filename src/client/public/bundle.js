@@ -59,13 +59,21 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 178);
 	
-	var _login = __webpack_require__(/*! ./components/views/login.jsx */ 233);
+	var _footer = __webpack_require__(/*! ./components/views/footer.jsx */ 233);
+	
+	var _footer2 = _interopRequireDefault(_footer);
+	
+	var _login = __webpack_require__(/*! ./components/views/login.jsx */ 234);
 	
 	var _login2 = _interopRequireDefault(_login);
 	
-	var _signup = __webpack_require__(/*! ./components/views/signup.jsx */ 259);
+	var _signup = __webpack_require__(/*! ./components/views/signup.jsx */ 260);
 	
 	var _signup2 = _interopRequireDefault(_signup);
+	
+	var _profile = __webpack_require__(/*! ./components/views/profile.jsx */ 261);
+	
+	var _profile2 = _interopRequireDefault(_profile);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -89,24 +97,60 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { style: styles.container },
+	        { className: 'app-container' },
 	        _react2.default.createElement(
 	          'div',
-	          { style: styles.link },
+	          { className: 'nav-container' },
 	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/login' },
-	            'Login'
+	            'div',
+	            { className: 'brand-container' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'brand-img' },
+	              'Tangent'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'link-container' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'nav-link' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/login' },
+	                'Login'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'nav-link' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/signup' },
+	                'Sign Up'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'nav-link' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/profile' },
+	                'Profile'
+	              )
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { style: styles.link },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/signup' },
-	            'Sign Up'
-	          )
+	          { className: 'app-img-container' },
+	          _react2.default.createElement('div', { className: 'app-img' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'footer-container' },
+	          _react2.default.createElement(_footer2.default, null)
 	        )
 	      );
 	    }
@@ -115,24 +159,13 @@
 	  return App;
 	}(_react.Component);
 	
-	var styles = {
-	  container: {
-	    display: 'flex',
-	    flexDirection: 'row',
-	    justifyContent: 'flex-end',
-	    alignItems: 'center'
-	  },
-	  link: {
-	    margin: '0 30px 0 0'
-	  }
-	};
-	
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
 	  { history: _reactRouter.browserHistory },
 	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: App }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '/login', component: _login2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: '/signup', component: _signup2.default })
+	  _react2.default.createElement(_reactRouter.Route, { path: '/signup', component: _signup2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _profile2.default })
 	), document.getElementById('main'));
 
 /***/ },
@@ -27145,6 +27178,71 @@
 
 /***/ },
 /* 233 */
+/*!****************************************************!*\
+  !*** ./src/client/app/components/views/footer.jsx ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Footer = function (_Component) {
+	  _inherits(Footer, _Component);
+	
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+	
+	    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+	  }
+	
+	  _createClass(Footer, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'footer-container' },
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            'About'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            'Contact Us'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Footer;
+	}(_react.Component);
+	
+	exports.default = Footer;
+
+/***/ },
+/* 234 */
 /*!***************************************************!*\
   !*** ./src/client/app/components/views/login.jsx ***!
   \***************************************************/
@@ -27164,7 +27262,7 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
-	var _axios = __webpack_require__(/*! axios */ 234);
+	var _axios = __webpack_require__(/*! axios */ 235);
 	
 	var _axios2 = _interopRequireDefault(_axios);
 	
@@ -27219,36 +27317,36 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'login-main-container' },
+	        { className: 'register-main-container' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'login-container' },
+	          { className: 'register-container' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'login-icon-container' },
-	            _react2.default.createElement('i', { className: 'fa fa-user-circle-o login-icon', 'aria-hidden': 'true' })
+	            { className: 'register-icon-container' },
+	            _react2.default.createElement('i', { className: 'fa fa-user-circle-o register-icon', 'aria-hidden': 'true' })
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'login-form-container' },
+	            { className: 'register-form-container' },
 	            _react2.default.createElement(
 	              'form',
-	              { className: 'login-form' },
+	              { className: 'register-form' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'login-input-container' },
-	                _react2.default.createElement('i', { className: 'fa fa-user login-input-icon', 'aria-hidden': 'true' }),
-	                _react2.default.createElement('input', { className: 'login-input', value: this.state.username, type: 'text', name: 'username', placeholder: 'username', onChange: this._handleChange })
+	                { className: 'register-input-container' },
+	                _react2.default.createElement('i', { className: 'fa fa-user register-input-icon', 'aria-hidden': 'true' }),
+	                _react2.default.createElement('input', { className: 'register-input', value: this.state.username, type: 'text', name: 'username', placeholder: 'username', onChange: this._handleChange })
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'login-input-container' },
-	                _react2.default.createElement('i', { className: 'fa fa-lock login-input-icon', 'aria-hidden': 'true' }),
-	                _react2.default.createElement('input', { className: 'login-input', value: this.state.password, type: 'text', name: 'password', placeholder: 'password', onChange: this._handleChange })
+	                { className: 'register-input-container' },
+	                _react2.default.createElement('i', { className: 'fa fa-lock register-input-icon', 'aria-hidden': 'true' }),
+	                _react2.default.createElement('input', { className: 'register-input', value: this.state.password, type: 'text', name: 'password', placeholder: 'password', onChange: this._handleChange })
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'login-btn', type: 'submit', value: 'Submit', onClick: this._handleClick },
+	                { className: 'register-btn', type: 'submit', value: 'Submit', onClick: this._handleClick },
 	                'Login'
 	              )
 	            )
@@ -27278,6 +27376,20 @@
 	                )
 	              )
 	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'register-footer' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'register-footer-text' },
+	              'Dont have an account? ',
+	              _react2.default.createElement(
+	                'a',
+	                { href: '/signup', className: 'footer-link' },
+	                'Sign up!'
+	              )
+	            )
 	          )
 	        )
 	      );
@@ -27290,16 +27402,16 @@
 	exports.default = Login;
 
 /***/ },
-/* 234 */
+/* 235 */
 /*!**************************!*\
   !*** ./~/axios/index.js ***!
   \**************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(/*! ./lib/axios */ 235);
+	module.exports = __webpack_require__(/*! ./lib/axios */ 236);
 
 /***/ },
-/* 235 */
+/* 236 */
 /*!******************************!*\
   !*** ./~/axios/lib/axios.js ***!
   \******************************/
@@ -27307,10 +27419,10 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./utils */ 236);
-	var bind = __webpack_require__(/*! ./helpers/bind */ 237);
-	var Axios = __webpack_require__(/*! ./core/Axios */ 238);
-	var defaults = __webpack_require__(/*! ./defaults */ 239);
+	var utils = __webpack_require__(/*! ./utils */ 237);
+	var bind = __webpack_require__(/*! ./helpers/bind */ 238);
+	var Axios = __webpack_require__(/*! ./core/Axios */ 239);
+	var defaults = __webpack_require__(/*! ./defaults */ 240);
 	
 	/**
 	 * Create an instance of Axios
@@ -27343,15 +27455,15 @@
 	};
 	
 	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(/*! ./cancel/Cancel */ 256);
-	axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ 257);
-	axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ 253);
+	axios.Cancel = __webpack_require__(/*! ./cancel/Cancel */ 257);
+	axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ 258);
+	axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ 254);
 	
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(/*! ./helpers/spread */ 258);
+	axios.spread = __webpack_require__(/*! ./helpers/spread */ 259);
 	
 	module.exports = axios;
 	
@@ -27360,7 +27472,7 @@
 
 
 /***/ },
-/* 236 */
+/* 237 */
 /*!******************************!*\
   !*** ./~/axios/lib/utils.js ***!
   \******************************/
@@ -27368,7 +27480,7 @@
 
 	'use strict';
 	
-	var bind = __webpack_require__(/*! ./helpers/bind */ 237);
+	var bind = __webpack_require__(/*! ./helpers/bind */ 238);
 	
 	/*global toString:true*/
 	
@@ -27668,7 +27780,7 @@
 
 
 /***/ },
-/* 237 */
+/* 238 */
 /*!*************************************!*\
   !*** ./~/axios/lib/helpers/bind.js ***!
   \*************************************/
@@ -27688,7 +27800,7 @@
 
 
 /***/ },
-/* 238 */
+/* 239 */
 /*!***********************************!*\
   !*** ./~/axios/lib/core/Axios.js ***!
   \***********************************/
@@ -27696,12 +27808,12 @@
 
 	'use strict';
 	
-	var defaults = __webpack_require__(/*! ./../defaults */ 239);
-	var utils = __webpack_require__(/*! ./../utils */ 236);
-	var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ 250);
-	var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ 251);
-	var isAbsoluteURL = __webpack_require__(/*! ./../helpers/isAbsoluteURL */ 254);
-	var combineURLs = __webpack_require__(/*! ./../helpers/combineURLs */ 255);
+	var defaults = __webpack_require__(/*! ./../defaults */ 240);
+	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ 251);
+	var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ 252);
+	var isAbsoluteURL = __webpack_require__(/*! ./../helpers/isAbsoluteURL */ 255);
+	var combineURLs = __webpack_require__(/*! ./../helpers/combineURLs */ 256);
 	
 	/**
 	 * Create a new instance of Axios
@@ -27782,7 +27894,7 @@
 
 
 /***/ },
-/* 239 */
+/* 240 */
 /*!*********************************!*\
   !*** ./~/axios/lib/defaults.js ***!
   \*********************************/
@@ -27790,8 +27902,8 @@
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 	
-	var utils = __webpack_require__(/*! ./utils */ 236);
-	var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ 240);
+	var utils = __webpack_require__(/*! ./utils */ 237);
+	var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ 241);
 	
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -27808,10 +27920,10 @@
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(/*! ./adapters/xhr */ 241);
+	    adapter = __webpack_require__(/*! ./adapters/xhr */ 242);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(/*! ./adapters/http */ 241);
+	    adapter = __webpack_require__(/*! ./adapters/http */ 242);
 	  }
 	  return adapter;
 	}
@@ -27885,7 +27997,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
-/* 240 */
+/* 241 */
 /*!****************************************************!*\
   !*** ./~/axios/lib/helpers/normalizeHeaderName.js ***!
   \****************************************************/
@@ -27893,7 +28005,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ../utils */ 236);
+	var utils = __webpack_require__(/*! ../utils */ 237);
 	
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -27906,7 +28018,7 @@
 
 
 /***/ },
-/* 241 */
+/* 242 */
 /*!*************************************!*\
   !*** ./~/axios/lib/adapters/xhr.js ***!
   \*************************************/
@@ -27914,13 +28026,13 @@
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 236);
-	var settle = __webpack_require__(/*! ./../core/settle */ 242);
-	var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ 245);
-	var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ 246);
-	var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ 247);
-	var createError = __webpack_require__(/*! ../core/createError */ 243);
-	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(/*! ./../helpers/btoa */ 248);
+	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var settle = __webpack_require__(/*! ./../core/settle */ 243);
+	var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ 246);
+	var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ 247);
+	var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ 248);
+	var createError = __webpack_require__(/*! ../core/createError */ 244);
+	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(/*! ./../helpers/btoa */ 249);
 	
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -28016,7 +28128,7 @@
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(/*! ./../helpers/cookies */ 249);
+	      var cookies = __webpack_require__(/*! ./../helpers/cookies */ 250);
 	
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -28093,7 +28205,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
-/* 242 */
+/* 243 */
 /*!************************************!*\
   !*** ./~/axios/lib/core/settle.js ***!
   \************************************/
@@ -28101,7 +28213,7 @@
 
 	'use strict';
 	
-	var createError = __webpack_require__(/*! ./createError */ 243);
+	var createError = __webpack_require__(/*! ./createError */ 244);
 	
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -28127,7 +28239,7 @@
 
 
 /***/ },
-/* 243 */
+/* 244 */
 /*!*****************************************!*\
   !*** ./~/axios/lib/core/createError.js ***!
   \*****************************************/
@@ -28135,7 +28247,7 @@
 
 	'use strict';
 	
-	var enhanceError = __webpack_require__(/*! ./enhanceError */ 244);
+	var enhanceError = __webpack_require__(/*! ./enhanceError */ 245);
 	
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -28153,7 +28265,7 @@
 
 
 /***/ },
-/* 244 */
+/* 245 */
 /*!******************************************!*\
   !*** ./~/axios/lib/core/enhanceError.js ***!
   \******************************************/
@@ -28181,7 +28293,7 @@
 
 
 /***/ },
-/* 245 */
+/* 246 */
 /*!*****************************************!*\
   !*** ./~/axios/lib/helpers/buildURL.js ***!
   \*****************************************/
@@ -28189,7 +28301,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 236);
+	var utils = __webpack_require__(/*! ./../utils */ 237);
 	
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -28258,7 +28370,7 @@
 
 
 /***/ },
-/* 246 */
+/* 247 */
 /*!*********************************************!*\
   !*** ./~/axios/lib/helpers/parseHeaders.js ***!
   \*********************************************/
@@ -28266,7 +28378,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 236);
+	var utils = __webpack_require__(/*! ./../utils */ 237);
 	
 	/**
 	 * Parse headers into an object
@@ -28304,7 +28416,7 @@
 
 
 /***/ },
-/* 247 */
+/* 248 */
 /*!************************************************!*\
   !*** ./~/axios/lib/helpers/isURLSameOrigin.js ***!
   \************************************************/
@@ -28312,7 +28424,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 236);
+	var utils = __webpack_require__(/*! ./../utils */ 237);
 	
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -28381,7 +28493,7 @@
 
 
 /***/ },
-/* 248 */
+/* 249 */
 /*!*************************************!*\
   !*** ./~/axios/lib/helpers/btoa.js ***!
   \*************************************/
@@ -28426,7 +28538,7 @@
 
 
 /***/ },
-/* 249 */
+/* 250 */
 /*!****************************************!*\
   !*** ./~/axios/lib/helpers/cookies.js ***!
   \****************************************/
@@ -28434,7 +28546,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 236);
+	var utils = __webpack_require__(/*! ./../utils */ 237);
 	
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -28488,7 +28600,7 @@
 
 
 /***/ },
-/* 250 */
+/* 251 */
 /*!************************************************!*\
   !*** ./~/axios/lib/core/InterceptorManager.js ***!
   \************************************************/
@@ -28496,7 +28608,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 236);
+	var utils = __webpack_require__(/*! ./../utils */ 237);
 	
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -28549,7 +28661,7 @@
 
 
 /***/ },
-/* 251 */
+/* 252 */
 /*!*********************************************!*\
   !*** ./~/axios/lib/core/dispatchRequest.js ***!
   \*********************************************/
@@ -28557,10 +28669,10 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 236);
-	var transformData = __webpack_require__(/*! ./transformData */ 252);
-	var isCancel = __webpack_require__(/*! ../cancel/isCancel */ 253);
-	var defaults = __webpack_require__(/*! ../defaults */ 239);
+	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var transformData = __webpack_require__(/*! ./transformData */ 253);
+	var isCancel = __webpack_require__(/*! ../cancel/isCancel */ 254);
+	var defaults = __webpack_require__(/*! ../defaults */ 240);
 	
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -28637,7 +28749,7 @@
 
 
 /***/ },
-/* 252 */
+/* 253 */
 /*!*******************************************!*\
   !*** ./~/axios/lib/core/transformData.js ***!
   \*******************************************/
@@ -28645,7 +28757,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 236);
+	var utils = __webpack_require__(/*! ./../utils */ 237);
 	
 	/**
 	 * Transform the data for a request or a response
@@ -28666,7 +28778,7 @@
 
 
 /***/ },
-/* 253 */
+/* 254 */
 /*!****************************************!*\
   !*** ./~/axios/lib/cancel/isCancel.js ***!
   \****************************************/
@@ -28680,7 +28792,7 @@
 
 
 /***/ },
-/* 254 */
+/* 255 */
 /*!**********************************************!*\
   !*** ./~/axios/lib/helpers/isAbsoluteURL.js ***!
   \**********************************************/
@@ -28703,7 +28815,7 @@
 
 
 /***/ },
-/* 255 */
+/* 256 */
 /*!********************************************!*\
   !*** ./~/axios/lib/helpers/combineURLs.js ***!
   \********************************************/
@@ -28724,7 +28836,7 @@
 
 
 /***/ },
-/* 256 */
+/* 257 */
 /*!**************************************!*\
   !*** ./~/axios/lib/cancel/Cancel.js ***!
   \**************************************/
@@ -28752,7 +28864,7 @@
 
 
 /***/ },
-/* 257 */
+/* 258 */
 /*!*******************************************!*\
   !*** ./~/axios/lib/cancel/CancelToken.js ***!
   \*******************************************/
@@ -28760,7 +28872,7 @@
 
 	'use strict';
 	
-	var Cancel = __webpack_require__(/*! ./Cancel */ 256);
+	var Cancel = __webpack_require__(/*! ./Cancel */ 257);
 	
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -28818,7 +28930,7 @@
 
 
 /***/ },
-/* 258 */
+/* 259 */
 /*!***************************************!*\
   !*** ./~/axios/lib/helpers/spread.js ***!
   \***************************************/
@@ -28854,7 +28966,7 @@
 
 
 /***/ },
-/* 259 */
+/* 260 */
 /*!****************************************************!*\
   !*** ./src/client/app/components/views/signup.jsx ***!
   \****************************************************/
@@ -28871,8 +28983,6 @@
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -28895,9 +29005,57 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'h3',
-	        null,
-	        'Sign up Page'
+	        'div',
+	        { className: 'register-main-container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'register-container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'register-heading-container' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'register-heading' },
+	              'Sign up'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'register-form-container' },
+	            _react2.default.createElement(
+	              'form',
+	              { className: 'register-form' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'register-input-container' },
+	                _react2.default.createElement('input', { className: 'register-input', type: 'text', name: 'firstname', placeholder: 'first name' }),
+	                _react2.default.createElement('input', { className: 'register-input', type: 'text', name: 'lastname', placeholder: 'last name' }),
+	                _react2.default.createElement('input', { className: 'register-input', type: 'text', name: 'email', placeholder: 'email' }),
+	                _react2.default.createElement('input', { className: 'register-input', type: 'text', name: 'username', placeholder: 'username' }),
+	                _react2.default.createElement('input', { className: 'register-input', type: 'text', name: 'password', placeholder: 'password' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'register-btn', type: 'submit', value: 'Submit', onClick: this._handleClick },
+	                'Sign up'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'register-footer signup' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'register-footer-text' },
+	              'Already have an account? ',
+	              _react2.default.createElement(
+	                'a',
+	                { href: '/login', className: 'footer-link' },
+	                'Log in!'
+	              )
+	            )
+	          )
+	        )
 	      );
 	    }
 	  }]);
@@ -28906,6 +29064,72 @@
 	}(_react.Component);
 	
 	exports.default = Signup;
+
+/***/ },
+/* 261 */
+/*!*****************************************************!*\
+  !*** ./src/client/app/components/views/profile.jsx ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _axios = __webpack_require__(/*! axios */ 235);
+	
+	var _axios2 = _interopRequireDefault(_axios);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Profile = function (_Component) {
+	  _inherits(Profile, _Component);
+	
+	  function Profile(props) {
+	    _classCallCheck(this, Profile);
+	
+	    return _possibleConstructorReturn(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).call(this, props));
+	  }
+	
+	  _createClass(Profile, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      console.log('api profile');
+	      _axios2.default.get('/api/profile').then(function (res) {
+	        console.log('res', res);
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'h3',
+	        null,
+	        'Profile page'
+	      );
+	    }
+	  }]);
+	
+	  return Profile;
+	}(_react.Component);
+	
+	exports.default = Profile;
 
 /***/ }
 /******/ ]);
