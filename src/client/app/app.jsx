@@ -9,6 +9,7 @@ import Footer from './components/views/footer.jsx';
 import Login from './components/views/login.jsx';
 import Signup from './components/views/signup.jsx';
 import Profile from './components/views/profile.jsx';
+import Subjects from './components/views/subjects.jsx';
 import axios from 'axios';
 
 class App extends Component {
@@ -42,4 +43,5 @@ render((<Router history={ browserHistory }>
         <Route path="/login" component={ Login } />
         <Route path="/signup" component={ Signup } />
         <Route path="/profile" component={ Profile } />
+        <Route path="/subjects" component={ Subjects } />
       </Router>), document.getElementById('main'));

@@ -83,6 +83,10 @@
 	
 	var _profile2 = _interopRequireDefault(_profile);
 	
+	var _subjects = __webpack_require__(/*! ./components/views/subjects.jsx */ 266);
+	
+	var _subjects2 = _interopRequireDefault(_subjects);
+	
 	var _axios = __webpack_require__(/*! axios */ 236);
 	
 	var _axios2 = _interopRequireDefault(_axios);
@@ -137,7 +141,8 @@
 	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: App }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '/login', component: _login2.default }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '/signup', component: _signup2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _profile2.default })
+	  _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _profile2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/subjects', component: _subjects2.default })
 	), document.getElementById('main'));
 
 /***/ },
@@ -29282,6 +29287,33 @@
 	            { className: 'nav-link' },
 	            _react2.default.createElement(
 	              'a',
+	              { href: '/subjects' },
+	              'Subjects'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'nav-link' },
+	            _react2.default.createElement(
+	              'a',
+	              { href: '/mysubjects' },
+	              'My Subjects'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'nav-link' },
+	            _react2.default.createElement(
+	              'a',
+	              { href: '/review' },
+	              'Review'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'nav-link' },
+	            _react2.default.createElement(
+	              'a',
 	              { href: '/profile' },
 	              'My Profile'
 	            )
@@ -29295,6 +29327,103 @@
 	}(_react.Component);
 	
 	exports.default = Navbar;
+
+/***/ },
+/* 265 */,
+/* 266 */
+/*!******************************************************!*\
+  !*** ./src/client/app/components/views/subjects.jsx ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _axios = __webpack_require__(/*! axios */ 236);
+	
+	var _axios2 = _interopRequireDefault(_axios);
+	
+	var _authNavbar = __webpack_require__(/*! ./auth.navbar.jsx */ 264);
+	
+	var _authNavbar2 = _interopRequireDefault(_authNavbar);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Subjects = function (_Component) {
+	  _inherits(Subjects, _Component);
+	
+	  function Subjects() {
+	    _classCallCheck(this, Subjects);
+	
+	    return _possibleConstructorReturn(this, (Subjects.__proto__ || Object.getPrototypeOf(Subjects)).apply(this, arguments));
+	  }
+	
+	  _createClass(Subjects, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_authNavbar2.default, null),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'subject-container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'subject-header' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'subject-header-text' },
+	              'Choose a Subject to Review'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'subject-sort-container' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'subject-sort' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'subject-sort-btn' },
+	                'Humanities'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'subject-sort-btn' },
+	                'Sciences'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'subject-search' },
+	                _react2.default.createElement('input', { className: 'subject-search-input', type: 'text', placeholder: 'search for subject' })
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Subjects;
+	}(_react.Component);
+	
+	exports.default = Subjects;
 
 /***/ }
 /******/ ]);
