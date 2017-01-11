@@ -59,21 +59,33 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 178);
 	
-	var _footer = __webpack_require__(/*! ./components/views/footer.jsx */ 233);
+	var _navbar = __webpack_require__(/*! ./components/views/navbar.jsx */ 233);
+	
+	var _navbar2 = _interopRequireDefault(_navbar);
+	
+	var _authNavbar = __webpack_require__(/*! ./components/views/auth.navbar.jsx */ 264);
+	
+	var _authNavbar2 = _interopRequireDefault(_authNavbar);
+	
+	var _footer = __webpack_require__(/*! ./components/views/footer.jsx */ 234);
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
-	var _login = __webpack_require__(/*! ./components/views/login.jsx */ 234);
+	var _login = __webpack_require__(/*! ./components/views/login.jsx */ 235);
 	
 	var _login2 = _interopRequireDefault(_login);
 	
-	var _signup = __webpack_require__(/*! ./components/views/signup.jsx */ 260);
+	var _signup = __webpack_require__(/*! ./components/views/signup.jsx */ 261);
 	
 	var _signup2 = _interopRequireDefault(_signup);
 	
-	var _profile = __webpack_require__(/*! ./components/views/profile.jsx */ 261);
+	var _profile = __webpack_require__(/*! ./components/views/profile.jsx */ 262);
 	
 	var _profile2 = _interopRequireDefault(_profile);
+	
+	var _axios = __webpack_require__(/*! axios */ 236);
+	
+	var _axios2 = _interopRequireDefault(_axios);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -89,7 +101,10 @@
 	  function App() {
 	    _classCallCheck(this, App);
 	
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+	
+	    _this.isAuth = localStorage.getItem('token');
+	    return _this;
 	  }
 	
 	  _createClass(App, [{
@@ -98,50 +113,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'app-container' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'nav-container' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'brand-container' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'brand-img' },
-	              'Tangent'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'link-container' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'nav-link' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/login' },
-	                'Login'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'nav-link' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/signup' },
-	                'Sign Up'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'nav-link' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/profile' },
-	                'Profile'
-	              )
-	            )
-	          )
-	        ),
+	        this.isAuth ? _react2.default.createElement(_authNavbar2.default, null) : _react2.default.createElement(_navbar2.default, null),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'app-img-container' },
@@ -27179,6 +27151,97 @@
 /***/ },
 /* 233 */
 /*!****************************************************!*\
+  !*** ./src/client/app/components/views/navbar.jsx ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Navbar = function (_Component) {
+	  _inherits(Navbar, _Component);
+	
+	  function Navbar() {
+	    _classCallCheck(this, Navbar);
+	
+	    return _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).apply(this, arguments));
+	  }
+	
+	  _createClass(Navbar, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'nav-container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'brand-container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'brand-img' },
+	            'Tangent'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'link-container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'nav-link' },
+	            _react2.default.createElement(
+	              'a',
+	              { href: '/login' },
+	              'Login'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'nav-link' },
+	            _react2.default.createElement(
+	              'a',
+	              { href: '/signup' },
+	              'Sign Up'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'nav-link' },
+	            _react2.default.createElement(
+	              'a',
+	              { href: '/profile' },
+	              'Profile'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Navbar;
+	}(_react.Component);
+	
+	exports.default = Navbar;
+
+/***/ },
+/* 234 */
+/*!****************************************************!*\
   !*** ./src/client/app/components/views/footer.jsx ***!
   \****************************************************/
 /***/ function(module, exports, __webpack_require__) {
@@ -27242,7 +27305,7 @@
 	exports.default = Footer;
 
 /***/ },
-/* 234 */
+/* 235 */
 /*!***************************************************!*\
   !*** ./src/client/app/components/views/login.jsx ***!
   \***************************************************/
@@ -27262,7 +27325,7 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
-	var _axios = __webpack_require__(/*! axios */ 235);
+	var _axios = __webpack_require__(/*! axios */ 236);
 	
 	var _axios2 = _interopRequireDefault(_axios);
 	
@@ -27355,12 +27418,16 @@
 	            'div',
 	            { className: 'oauth-container' },
 	            _react2.default.createElement(
-	              'div',
-	              { className: 'btn-google', name: 'google' },
+	              'a',
+	              { href: '/login/google' },
 	              _react2.default.createElement(
-	                'span',
-	                { className: 'oauth-btn-icon' },
-	                _react2.default.createElement('i', { className: 'fa fa-google-plus', 'aria-hidden': 'true' })
+	                'div',
+	                { className: 'btn-google', name: 'google' },
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'oauth-btn-icon' },
+	                  _react2.default.createElement('i', { className: 'fa fa-google-plus', 'aria-hidden': 'true' })
+	                )
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -27402,16 +27469,16 @@
 	exports.default = Login;
 
 /***/ },
-/* 235 */
+/* 236 */
 /*!**************************!*\
   !*** ./~/axios/index.js ***!
   \**************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(/*! ./lib/axios */ 236);
+	module.exports = __webpack_require__(/*! ./lib/axios */ 237);
 
 /***/ },
-/* 236 */
+/* 237 */
 /*!******************************!*\
   !*** ./~/axios/lib/axios.js ***!
   \******************************/
@@ -27419,10 +27486,10 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./utils */ 237);
-	var bind = __webpack_require__(/*! ./helpers/bind */ 238);
-	var Axios = __webpack_require__(/*! ./core/Axios */ 239);
-	var defaults = __webpack_require__(/*! ./defaults */ 240);
+	var utils = __webpack_require__(/*! ./utils */ 238);
+	var bind = __webpack_require__(/*! ./helpers/bind */ 239);
+	var Axios = __webpack_require__(/*! ./core/Axios */ 240);
+	var defaults = __webpack_require__(/*! ./defaults */ 241);
 	
 	/**
 	 * Create an instance of Axios
@@ -27455,15 +27522,15 @@
 	};
 	
 	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(/*! ./cancel/Cancel */ 257);
-	axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ 258);
-	axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ 254);
+	axios.Cancel = __webpack_require__(/*! ./cancel/Cancel */ 258);
+	axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ 259);
+	axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ 255);
 	
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(/*! ./helpers/spread */ 259);
+	axios.spread = __webpack_require__(/*! ./helpers/spread */ 260);
 	
 	module.exports = axios;
 	
@@ -27472,7 +27539,7 @@
 
 
 /***/ },
-/* 237 */
+/* 238 */
 /*!******************************!*\
   !*** ./~/axios/lib/utils.js ***!
   \******************************/
@@ -27480,7 +27547,7 @@
 
 	'use strict';
 	
-	var bind = __webpack_require__(/*! ./helpers/bind */ 238);
+	var bind = __webpack_require__(/*! ./helpers/bind */ 239);
 	
 	/*global toString:true*/
 	
@@ -27780,7 +27847,7 @@
 
 
 /***/ },
-/* 238 */
+/* 239 */
 /*!*************************************!*\
   !*** ./~/axios/lib/helpers/bind.js ***!
   \*************************************/
@@ -27800,7 +27867,7 @@
 
 
 /***/ },
-/* 239 */
+/* 240 */
 /*!***********************************!*\
   !*** ./~/axios/lib/core/Axios.js ***!
   \***********************************/
@@ -27808,12 +27875,12 @@
 
 	'use strict';
 	
-	var defaults = __webpack_require__(/*! ./../defaults */ 240);
-	var utils = __webpack_require__(/*! ./../utils */ 237);
-	var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ 251);
-	var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ 252);
-	var isAbsoluteURL = __webpack_require__(/*! ./../helpers/isAbsoluteURL */ 255);
-	var combineURLs = __webpack_require__(/*! ./../helpers/combineURLs */ 256);
+	var defaults = __webpack_require__(/*! ./../defaults */ 241);
+	var utils = __webpack_require__(/*! ./../utils */ 238);
+	var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ 252);
+	var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ 253);
+	var isAbsoluteURL = __webpack_require__(/*! ./../helpers/isAbsoluteURL */ 256);
+	var combineURLs = __webpack_require__(/*! ./../helpers/combineURLs */ 257);
 	
 	/**
 	 * Create a new instance of Axios
@@ -27894,7 +27961,7 @@
 
 
 /***/ },
-/* 240 */
+/* 241 */
 /*!*********************************!*\
   !*** ./~/axios/lib/defaults.js ***!
   \*********************************/
@@ -27902,8 +27969,8 @@
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 	
-	var utils = __webpack_require__(/*! ./utils */ 237);
-	var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ 241);
+	var utils = __webpack_require__(/*! ./utils */ 238);
+	var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ 242);
 	
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -27920,10 +27987,10 @@
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(/*! ./adapters/xhr */ 242);
+	    adapter = __webpack_require__(/*! ./adapters/xhr */ 243);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(/*! ./adapters/http */ 242);
+	    adapter = __webpack_require__(/*! ./adapters/http */ 243);
 	  }
 	  return adapter;
 	}
@@ -27997,7 +28064,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
-/* 241 */
+/* 242 */
 /*!****************************************************!*\
   !*** ./~/axios/lib/helpers/normalizeHeaderName.js ***!
   \****************************************************/
@@ -28005,7 +28072,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ../utils */ 237);
+	var utils = __webpack_require__(/*! ../utils */ 238);
 	
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -28018,7 +28085,7 @@
 
 
 /***/ },
-/* 242 */
+/* 243 */
 /*!*************************************!*\
   !*** ./~/axios/lib/adapters/xhr.js ***!
   \*************************************/
@@ -28026,13 +28093,13 @@
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
-	var settle = __webpack_require__(/*! ./../core/settle */ 243);
-	var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ 246);
-	var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ 247);
-	var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ 248);
-	var createError = __webpack_require__(/*! ../core/createError */ 244);
-	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(/*! ./../helpers/btoa */ 249);
+	var utils = __webpack_require__(/*! ./../utils */ 238);
+	var settle = __webpack_require__(/*! ./../core/settle */ 244);
+	var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ 247);
+	var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ 248);
+	var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ 249);
+	var createError = __webpack_require__(/*! ../core/createError */ 245);
+	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(/*! ./../helpers/btoa */ 250);
 	
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -28128,7 +28195,7 @@
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(/*! ./../helpers/cookies */ 250);
+	      var cookies = __webpack_require__(/*! ./../helpers/cookies */ 251);
 	
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -28205,7 +28272,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
-/* 243 */
+/* 244 */
 /*!************************************!*\
   !*** ./~/axios/lib/core/settle.js ***!
   \************************************/
@@ -28213,7 +28280,7 @@
 
 	'use strict';
 	
-	var createError = __webpack_require__(/*! ./createError */ 244);
+	var createError = __webpack_require__(/*! ./createError */ 245);
 	
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -28239,7 +28306,7 @@
 
 
 /***/ },
-/* 244 */
+/* 245 */
 /*!*****************************************!*\
   !*** ./~/axios/lib/core/createError.js ***!
   \*****************************************/
@@ -28247,7 +28314,7 @@
 
 	'use strict';
 	
-	var enhanceError = __webpack_require__(/*! ./enhanceError */ 245);
+	var enhanceError = __webpack_require__(/*! ./enhanceError */ 246);
 	
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -28265,7 +28332,7 @@
 
 
 /***/ },
-/* 245 */
+/* 246 */
 /*!******************************************!*\
   !*** ./~/axios/lib/core/enhanceError.js ***!
   \******************************************/
@@ -28293,7 +28360,7 @@
 
 
 /***/ },
-/* 246 */
+/* 247 */
 /*!*****************************************!*\
   !*** ./~/axios/lib/helpers/buildURL.js ***!
   \*****************************************/
@@ -28301,7 +28368,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 238);
 	
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -28370,7 +28437,7 @@
 
 
 /***/ },
-/* 247 */
+/* 248 */
 /*!*********************************************!*\
   !*** ./~/axios/lib/helpers/parseHeaders.js ***!
   \*********************************************/
@@ -28378,7 +28445,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 238);
 	
 	/**
 	 * Parse headers into an object
@@ -28416,7 +28483,7 @@
 
 
 /***/ },
-/* 248 */
+/* 249 */
 /*!************************************************!*\
   !*** ./~/axios/lib/helpers/isURLSameOrigin.js ***!
   \************************************************/
@@ -28424,7 +28491,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 238);
 	
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -28493,7 +28560,7 @@
 
 
 /***/ },
-/* 249 */
+/* 250 */
 /*!*************************************!*\
   !*** ./~/axios/lib/helpers/btoa.js ***!
   \*************************************/
@@ -28538,7 +28605,7 @@
 
 
 /***/ },
-/* 250 */
+/* 251 */
 /*!****************************************!*\
   !*** ./~/axios/lib/helpers/cookies.js ***!
   \****************************************/
@@ -28546,7 +28613,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 238);
 	
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -28600,7 +28667,7 @@
 
 
 /***/ },
-/* 251 */
+/* 252 */
 /*!************************************************!*\
   !*** ./~/axios/lib/core/InterceptorManager.js ***!
   \************************************************/
@@ -28608,7 +28675,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 238);
 	
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -28661,7 +28728,7 @@
 
 
 /***/ },
-/* 252 */
+/* 253 */
 /*!*********************************************!*\
   !*** ./~/axios/lib/core/dispatchRequest.js ***!
   \*********************************************/
@@ -28669,10 +28736,10 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
-	var transformData = __webpack_require__(/*! ./transformData */ 253);
-	var isCancel = __webpack_require__(/*! ../cancel/isCancel */ 254);
-	var defaults = __webpack_require__(/*! ../defaults */ 240);
+	var utils = __webpack_require__(/*! ./../utils */ 238);
+	var transformData = __webpack_require__(/*! ./transformData */ 254);
+	var isCancel = __webpack_require__(/*! ../cancel/isCancel */ 255);
+	var defaults = __webpack_require__(/*! ../defaults */ 241);
 	
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -28749,7 +28816,7 @@
 
 
 /***/ },
-/* 253 */
+/* 254 */
 /*!*******************************************!*\
   !*** ./~/axios/lib/core/transformData.js ***!
   \*******************************************/
@@ -28757,7 +28824,7 @@
 
 	'use strict';
 	
-	var utils = __webpack_require__(/*! ./../utils */ 237);
+	var utils = __webpack_require__(/*! ./../utils */ 238);
 	
 	/**
 	 * Transform the data for a request or a response
@@ -28778,7 +28845,7 @@
 
 
 /***/ },
-/* 254 */
+/* 255 */
 /*!****************************************!*\
   !*** ./~/axios/lib/cancel/isCancel.js ***!
   \****************************************/
@@ -28792,7 +28859,7 @@
 
 
 /***/ },
-/* 255 */
+/* 256 */
 /*!**********************************************!*\
   !*** ./~/axios/lib/helpers/isAbsoluteURL.js ***!
   \**********************************************/
@@ -28815,7 +28882,7 @@
 
 
 /***/ },
-/* 256 */
+/* 257 */
 /*!********************************************!*\
   !*** ./~/axios/lib/helpers/combineURLs.js ***!
   \********************************************/
@@ -28836,7 +28903,7 @@
 
 
 /***/ },
-/* 257 */
+/* 258 */
 /*!**************************************!*\
   !*** ./~/axios/lib/cancel/Cancel.js ***!
   \**************************************/
@@ -28864,7 +28931,7 @@
 
 
 /***/ },
-/* 258 */
+/* 259 */
 /*!*******************************************!*\
   !*** ./~/axios/lib/cancel/CancelToken.js ***!
   \*******************************************/
@@ -28872,7 +28939,7 @@
 
 	'use strict';
 	
-	var Cancel = __webpack_require__(/*! ./Cancel */ 257);
+	var Cancel = __webpack_require__(/*! ./Cancel */ 258);
 	
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -28930,7 +28997,7 @@
 
 
 /***/ },
-/* 259 */
+/* 260 */
 /*!***************************************!*\
   !*** ./~/axios/lib/helpers/spread.js ***!
   \***************************************/
@@ -28966,7 +29033,7 @@
 
 
 /***/ },
-/* 260 */
+/* 261 */
 /*!****************************************************!*\
   !*** ./src/client/app/components/views/signup.jsx ***!
   \****************************************************/
@@ -29066,7 +29133,7 @@
 	exports.default = Signup;
 
 /***/ },
-/* 261 */
+/* 262 */
 /*!*****************************************************!*\
   !*** ./src/client/app/components/views/profile.jsx ***!
   \*****************************************************/
@@ -29084,9 +29151,13 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _axios = __webpack_require__(/*! axios */ 235);
+	var _axios = __webpack_require__(/*! axios */ 236);
 	
 	var _axios2 = _interopRequireDefault(_axios);
+	
+	var _authNavbar = __webpack_require__(/*! ./auth.navbar.jsx */ 264);
+	
+	var _authNavbar2 = _interopRequireDefault(_authNavbar);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -29102,15 +29173,29 @@
 	  function Profile(props) {
 	    _classCallCheck(this, Profile);
 	
-	    return _possibleConstructorReturn(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).call(this, props));
+	
+	    _this.state = {
+	      name: ''
+	    };
+	    return _this;
 	  }
 	
 	  _createClass(Profile, [{
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
-	      console.log('api profile');
+	      var _this2 = this;
+	
 	      _axios2.default.get('/api/profile').then(function (res) {
 	        console.log('res', res);
+	        if (!res.data) window.location = '/login';else {
+	          localStorage.setItem('email', res.data.email);
+	          localStorage.setItem('token', res.data.token);
+	          _this2.setState({
+	            name: res.data.first_name + ' ' + res.data.last_name,
+	            email: res.data.email
+	          });
+	        }
 	      }).catch(function (err) {
 	        console.log(err);
 	      });
@@ -29119,9 +29204,15 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'h3',
+	        'div',
 	        null,
-	        'Profile page'
+	        _react2.default.createElement(_authNavbar2.default, null),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Profile page'
+	        ),
+	        _react2.default.createElement('div', null)
 	      );
 	    }
 	  }]);
@@ -29130,6 +29221,80 @@
 	}(_react.Component);
 	
 	exports.default = Profile;
+
+/***/ },
+/* 263 */,
+/* 264 */
+/*!*********************************************************!*\
+  !*** ./src/client/app/components/views/auth.navbar.jsx ***!
+  \*********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Navbar = function (_Component) {
+	  _inherits(Navbar, _Component);
+	
+	  function Navbar() {
+	    _classCallCheck(this, Navbar);
+	
+	    return _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).apply(this, arguments));
+	  }
+	
+	  _createClass(Navbar, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'nav-container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'brand-container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'brand-img' },
+	            'Tangent'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'link-container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'nav-link' },
+	            _react2.default.createElement(
+	              'a',
+	              { href: '/profile' },
+	              'My Profile'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Navbar;
+	}(_react.Component);
+	
+	exports.default = Navbar;
 
 /***/ }
 /******/ ]);

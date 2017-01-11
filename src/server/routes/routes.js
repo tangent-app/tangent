@@ -6,35 +6,51 @@ module.exports = function(app, passport) {
 
   app.get('/login/facebook', passport.authenticate('facebook', { scope : 'email' }));
 
-  app.get('/login/facebook/return', passport.authenticate('facebook', { failureRedirect: '/login' }),
-  function(req, res) {
-
-    helpers.oAuthSignin(req.user, function(data) {
-      if(data) res.redirect('/profile');
-    });
+  // app.get('/login/facebook/return', passport.authenticate('facebook', { failureRedirect: '/login' }),
+  // function(req, res) {
+  //   helpers.oAuthSignin(req.user, function(data) {
+  //     if(data) res.redirect('/profile');
+  //   });
+  // });
+  app.get('/login/facebook/return', passport.authenticate('facebook', 
+    { 
+      // successRedirect : '/auth/facebook/login', 
+      failureRedirect : '/',
+      failureFlash : true
+    }
+  ), function(req, res) {
+    res.redirect('/profile');
   });
 
-  // app.get('/profile', require('connect-ensure-login').ensureLoggedIn('/login'), function(req, res){
-  //   console.log('asdfasdfdsfd');
-  //     res.redirect('/');
-  // });
+  app.get('/login/google', passport.authenticate('google', { scope: [ 'profile', 'email' ] }));
   
-  // function loggedIn(req, res, next) {
-  //   if (req.user) {
-  //       next();
-  //   } else {
-  //       res.redirect('/login');
-  //   }
-  // }
+  app.get('/login/google/return', passport.authenticate('google', {
+      failureRedirect : '/',
+      failureFlash : true
+    }
+  ), function(req, res) {
+    res.redirect('/profile');
+  });
+  
 
-  // app.get('/profile', loggedIn, function(req, res, next) {
-  //   console.log('reqqqqqqq user', req.user);
-  //   res.end();
-   
-  // });
+
 
   app.get('/api/profile', function(req, res) {
-    res.json(req.user);
+    if(!req.user) {
+      res.json(false);
+    }
+    else {
+      let data = {
+        _id: req.user._id,
+        email: req.user.email,
+        first_name: req.user.first_name,
+        last_name: req.user.last_name,
+        token: req.user.token
+      };
+
+      res.json(data);
+    }
+    
   });
 
   app.get('/api/signin', function(req, res) {
@@ -49,6 +65,17 @@ module.exports = function(app, passport) {
       res.json(data);
     });
 
+  });
+
+  app.get('/api/checklogin', function(req, res) {
+    console.log('check login route', req.user);
+    if(req.user) {
+      helpers.checkLogin(req.user, function() {
+
+      });
+    } else {
+      res.end();
+    }
   });
  
 }

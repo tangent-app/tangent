@@ -7,7 +7,9 @@ const path = require('path');
 const mongoose = require('mongoose');
 const routes = require('./routes/routes');
 const passport = require('passport');
-const oauth_passport = require('./helpers/passport.js')(passport);
+const helpers = require('./helpers/helpers');
+const oauth_passport = require('./helpers/passport.js')(passport, helpers);
+const Users = require('./models/users');
 
 const app = express();
 
@@ -15,6 +17,17 @@ const PORT = process.env.PORT || 8000;
 
 const URI = process.env.callbackURL ? process.env.MONGODB_URI : 'mongodb://localhost/tangent';
 mongoose.connect(URI);
+
+
+// Users.remove({}, function(err, user) {
+//   console.log('users removed');
+// });
+
+// Users.find({}, function(err, users) {
+//   console.log('users', users);
+// })
+
+
 
 app.use(express.static(__dirname + '../../client'));
 app.use(morgan('combined'));
