@@ -16,17 +16,36 @@ class Subjects extends Component {
       subjects: subjects
     };
     this._handleChange = this._handleChange.bind(this);
+    this._handleClick = this._handleClick.bind(this);
   }
 
   _handleChange(e) {
     var search = new RegExp(e.target.value, 'gi');
-
     var filtered = subjects.filter((subject) => {
       return subject.subject_name.match(search);
     });
 
-    console.log(filtered, search);
     this.setState({ subjects: filtered });
+  }
+
+  _handleClick(e) {
+    console.log('e', e.target.innerText);
+
+    var text = e.target.innerText.toLowerCase();
+
+    if( text === 'all') {
+      this.setState({ subjects: subjects });
+    }
+    else {
+      var filtered = subjects.filter((subject) => {
+        return subject.category === text;
+      });
+
+      this.setState({ subjects: filtered });
+    }
+    
+    var input = document.getElementById('filter-input');
+    input.value = '';
   }
 
   render() {
@@ -39,10 +58,11 @@ class Subjects extends Component {
           </div>
           <div className='subject-sort-container'>
             <div className='subject-sort'>   
-              <div className='subject-sort-btn'>Humanities</div>
-              <div className='subject-sort-btn'>Sciences</div>
+              <div className='subject-sort-btn' onClick={ this._handleClick } >All</div>
+              <div className='subject-sort-btn' onClick={ this._handleClick } >Humanities</div>
+              <div className='subject-sort-btn' onClick={ this._handleClick } >Sciences</div>
               <div className='subject-search'>
-                <input className='subject-search-input' type='text' placeholder='search' onChange={ this._handleChange } />
+                <input id='filter-input' className='subject-search-input' type='text' placeholder='search' onChange={ this._handleChange } />
               </div>
             </div>
           </div>
