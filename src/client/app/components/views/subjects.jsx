@@ -6,8 +6,6 @@ import AuthNavbar from './auth.navbar.jsx';
 import Footer from './footer.jsx';
 import subjects from '../../../../sample-data/subjects.json';
 
-console.log(subjects);
-
 class Subjects extends Component {
 
   constructor(props) {
@@ -29,7 +27,6 @@ class Subjects extends Component {
   }
 
   _handleClick(e) {
-    console.log('e', e.target.innerText);
 
     var text = e.target.innerText.toLowerCase();
 
@@ -71,6 +68,9 @@ class Subjects extends Component {
               this.state.subjects.map((subject) => {
                 return (
                   <div className='subject-card'> 
+                    <div className='subject-card-btn-container'>
+                      <i className="fa fa-plus-circle fa-2x subject-card-btn" aria-hidden="true"></i>
+                    </div>
                     <div className='subject-card-text'> { subject.subject_name } </div>
                   </div>
                 );
