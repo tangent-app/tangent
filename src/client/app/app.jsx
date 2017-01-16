@@ -26,9 +26,7 @@ class App extends Component {
         <div className='app-img-container'>
           <div className='app-img'></div>
         </div>
-        <div className='footer-container'>
-          <Footer />
-        </div>
+        <Footer />
       </div>
     );
 

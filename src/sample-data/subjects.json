@@ -1,0 +1,50 @@
+[
+  {
+    "subject_name": "AP BIOLOGY",
+    "category": "sciences"
+  },
+  {
+    "subject_name": "AP CALC AB/BC",
+    "category": "sciences"
+  },
+  {
+    "subject_name": "AP CHEMISTRY",
+    "category": "sciences"
+  },
+  {
+    "subject_name": "AP ENG LANG",
+    "category": "humanities"
+  },
+  {
+    "subject_name": "AP ENG LIT",
+    "category": "humanities"
+  },
+  {
+    "subject_name": "AP MACROECON",
+    "category": "humanities"
+  },
+  {
+    "subject_name": "AP MICROECON",
+    "category": "humanities"
+  },
+  {
+    "subject_name": "AP PSYCHOLOGY",
+    "category": "sciences"
+  },
+  {
+    "subject_name": "AP STATISTICS",
+    "category": "sciences"
+  },
+  {
+    "subject_name": "AP US GOVT & POL",
+    "category": "humanities"
+  },
+  {
+    "subject_name": "AP US HIST",
+    "category": "humanities"
+  },
+  {
+    "subject_name": "AP WORLD HIST",
+    "category": "humanities"
+  }
+]

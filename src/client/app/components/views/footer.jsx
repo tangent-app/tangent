@@ -5,13 +5,16 @@ import React, { Component } from 'react';
 class Footer extends Component {
   render() {
     return (
-      <div className='container'>
-        <div className='footer-container'>
-          <div>About</div>
-          <div>Contact Us</div>
+      <div className='footer-container'>
+        <div className='brand-container'>
+          <div className='brand-img'>Tangent</div>
         </div>
-      </div>
-    )
+        <div className='footer-text-container'>
+          <a href='/about' className='footer-text'>About</a>
+          <a href='/contact' className='footer-text'>Contact Us</a>
+        </div>
+      </div> 
+    );
   }
 }
 
