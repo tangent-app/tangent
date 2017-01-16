@@ -27832,7 +27832,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'brand-img' },
-	            'Tangent'
+	            'tangent'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -27844,7 +27844,7 @@
 	            _react2.default.createElement(
 	              'a',
 	              { href: '/subjects' },
-	              'Subjects'
+	              'subjects'
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -27853,7 +27853,7 @@
 	            _react2.default.createElement(
 	              'a',
 	              { href: '/mysubjects' },
-	              'My Subjects'
+	              'my subjects'
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -27862,7 +27862,7 @@
 	            _react2.default.createElement(
 	              'a',
 	              { href: '/review' },
-	              'Review'
+	              'review'
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -27871,7 +27871,7 @@
 	            _react2.default.createElement(
 	              'a',
 	              { href: '/profile' },
-	              'My Profile'
+	              'my profile'
 	            )
 	          )
 	        )
@@ -27932,7 +27932,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'brand-img' },
-	            'Tangent'
+	            'tangent'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -29868,7 +29868,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          null,
+	          { className: 'logout-button' },
 	          ' Logout '
 	        )
 	      );

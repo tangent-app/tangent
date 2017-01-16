@@ -38,7 +38,7 @@ class Profile extends Component {
       <div>
         <AuthNavbar />
         <h3>Profile page</h3>
-        <div> Logout </div>
+        <div className='logout-button'> Logout </div>
       </div>
     )
   }

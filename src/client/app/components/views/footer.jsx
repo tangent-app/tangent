@@ -7,7 +7,7 @@ class Footer extends Component {
     return (
       <div className='footer-container'>
         <div className='brand-container'>
-          <div className='brand-img'>Tangent</div>
+          <div className='brand-img'>tangent</div>
         </div>
         <div className='footer-text-container'>
           <a href='/about' className='footer-text'>About</a>

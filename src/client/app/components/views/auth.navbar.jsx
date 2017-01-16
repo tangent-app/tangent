@@ -8,20 +8,20 @@ class Navbar extends Component {
     return (
       <div className='nav-container'>
         <div className='brand-container'>
-          <div className='brand-img'>Tangent</div>
+          <div className='brand-img'>tangent</div>
         </div>
         <div className='link-container'>
           <div className='nav-link'>
-            <a href="/subjects">Subjects</a>
+            <a href="/subjects">subjects</a>
           </div>
           <div className='nav-link'>
-            <a href="/mysubjects">My Subjects</a>
+            <a href="/mysubjects">my subjects</a>
           </div>
           <div className='nav-link'>
-            <a href="/review">Review</a>
+            <a href="/review">review</a>
           </div>
           <div className='nav-link'>
-            <a href="/profile">My Profile</a>
+            <a href="/profile">my profile</a>
           </div>
         </div>
       </div>
