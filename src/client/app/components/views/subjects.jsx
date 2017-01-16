@@ -10,6 +10,25 @@ console.log(subjects);
 
 class Subjects extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      subjects: subjects
+    };
+    this._handleChange = this._handleChange.bind(this);
+  }
+
+  _handleChange(e) {
+    var search = new RegExp(e.target.value, 'gi');
+
+    var filtered = subjects.filter((subject) => {
+      return subject.subject_name.match(search);
+    });
+
+    console.log(filtered, search);
+    this.setState({ subjects: filtered });
+  }
+
   render() {
     return (
       <div>
@@ -23,13 +42,13 @@ class Subjects extends Component {
               <div className='subject-sort-btn'>Humanities</div>
               <div className='subject-sort-btn'>Sciences</div>
               <div className='subject-search'>
-                <input className='subject-search-input' type='text' placeholder='search' />
+                <input className='subject-search-input' type='text' placeholder='search' onChange={ this._handleChange } />
               </div>
             </div>
           </div>
           <div className='subject-list-container'>
             { 
-              subjects.map((subject) => {
+              this.state.subjects.map((subject) => {
                 return (
                   <div className='subject-card'> 
                     <div className='subject-card-text'> { subject.subject_name } </div>

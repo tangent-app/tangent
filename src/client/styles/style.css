@@ -10,7 +10,7 @@ html, body {
   align-items: center;
   height: 75px;
   padding: 0 10px 0 10px;
-  background-color: #0C0C0C;
+  background-color: #6FB7BC;
 }
 
 .link-container {
@@ -243,6 +243,10 @@ html, body {
   cursor: pointer;
 }
 
+.subject-sort-btn:hover {
+  background-color: #98C1E0;
+}
+
 .subject-search {
   margin-left: 50px;
 }
@@ -268,10 +272,12 @@ html, body {
   align-items: center;
   vertical-align: middle;
   line-height: 200px; 
-  border: 1px solid black;
+  min-width: 250px;
   width: 20vw;
   height: 200px;
   margin: 10px 10px 10px 10px;
+  box-shadow: 9px 9px 5px #888888;
+  background-color: aliceblue;
 }
 
 /* Footer Page*/

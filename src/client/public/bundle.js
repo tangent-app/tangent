@@ -29384,13 +29384,31 @@
 	var Subjects = function (_Component) {
 	  _inherits(Subjects, _Component);
 	
-	  function Subjects() {
+	  function Subjects(props) {
 	    _classCallCheck(this, Subjects);
 	
-	    return _possibleConstructorReturn(this, (Subjects.__proto__ || Object.getPrototypeOf(Subjects)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Subjects.__proto__ || Object.getPrototypeOf(Subjects)).call(this, props));
+	
+	    _this.state = {
+	      subjects: _subjects2.default
+	    };
+	    _this._handleChange = _this._handleChange.bind(_this);
+	    return _this;
 	  }
 	
 	  _createClass(Subjects, [{
+	    key: '_handleChange',
+	    value: function _handleChange(e) {
+	      var search = new RegExp(e.target.value, 'gi');
+	
+	      var filtered = _subjects2.default.filter(function (subject) {
+	        return subject.subject_name.match(search);
+	      });
+	
+	      console.log(filtered, search);
+	      this.setState({ subjects: filtered });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -29428,14 +29446,14 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'subject-search' },
-	                _react2.default.createElement('input', { className: 'subject-search-input', type: 'text', placeholder: 'search' })
+	                _react2.default.createElement('input', { className: 'subject-search-input', type: 'text', placeholder: 'search', onChange: this._handleChange })
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'subject-list-container' },
-	            _subjects2.default.map(function (subject) {
+	            this.state.subjects.map(function (subject) {
 	              return _react2.default.createElement(
 	                'div',
 	                { className: 'subject-card' },
