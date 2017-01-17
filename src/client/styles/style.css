@@ -277,6 +277,14 @@ html, body {
   background-color: aliceblue;
 }
 
+.subject-card-text {
+  height: 148px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .subject-card-btn-container {
   display: flex;
   align-items: center;

@@ -1,50 +1,62 @@
 [
   {
     "subject_name": "AP BIOLOGY",
-    "category": "sciences"
+    "category": "sciences",
+    "key": "biology"
   },
   {
     "subject_name": "AP CALC AB/BC",
-    "category": "sciences"
+    "category": "sciences",
+    "key": "calc"
   },
   {
     "subject_name": "AP CHEMISTRY",
-    "category": "sciences"
+    "category": "sciences",
+    "key": "chemistry"
   },
   {
     "subject_name": "AP ENG LANG",
-    "category": "humanities"
+    "category": "humanities",
+    "key": "eng_lang"
   },
   {
     "subject_name": "AP ENG LIT",
-    "category": "humanities"
+    "category": "humanities",
+    "key": "eng_lit"
   },
   {
     "subject_name": "AP MACROECON",
-    "category": "humanities"
+    "category": "humanities",
+    "key": "macroecon"
   },
   {
     "subject_name": "AP MICROECON",
-    "category": "humanities"
+    "category": "humanities",
+    "key": "microecon"
   },
   {
     "subject_name": "AP PSYCHOLOGY",
-    "category": "sciences"
+    "category": "sciences",
+    "key": "psychology"
   },
   {
     "subject_name": "AP STATISTICS",
-    "category": "sciences"
+    "category": "sciences",
+    "key": "stats"
   },
   {
     "subject_name": "AP US GOVT & POL",
-    "category": "humanities"
+    "category": "humanities",
+    "key": "govt"
   },
   {
     "subject_name": "AP US HIST",
-    "category": "humanities"
+    "category": "humanities",
+    "key": "us_hist"
   },
   {
     "subject_name": "AP WORLD HIST",
-    "category": "humanities"
+    "category": "humanities",
+    "key": "world_hist"
   }
 ]

@@ -15,6 +15,8 @@ class Subjects extends Component {
     };
     this._handleChange = this._handleChange.bind(this);
     this._handleClick = this._handleClick.bind(this);
+    this._handleRoute = this._handleRoute.bind(this);
+    this.props = props;
   }
 
   _handleChange(e) {
@@ -27,8 +29,7 @@ class Subjects extends Component {
   }
 
   _handleClick(e) {
-
-    var text = e.target.innerText.toLowerCase();
+    let text = e.target.innerText.toLowerCase();
 
     if( text === 'all') {
       this.setState({ subjects: subjects });
@@ -43,6 +44,10 @@ class Subjects extends Component {
     
     var input = document.getElementById('filter-input');
     input.value = '';
+  }
+
+  _handleRoute(subject) {
+    this.props.router.push('/subjects/' + subject);
   }
 
   render() {
@@ -67,11 +72,11 @@ class Subjects extends Component {
             { 
               this.state.subjects.map((subject) => {
                 return (
-                  <div className='subject-card'> 
+                  <div className='subject-card' key={ subject.key }> 
                     <div className='subject-card-btn-container'>
                       <i className="fa fa-plus-circle fa-2x subject-card-btn" aria-hidden="true"></i>
                     </div>
-                    <div className='subject-card-text'> { subject.subject_name } </div>
+                    <div className='subject-card-text' onClick={ this._handleRoute.bind(this, subject.key) }> { subject.subject_name } </div>
                   </div>
                 );
               })

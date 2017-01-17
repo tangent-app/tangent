@@ -10,6 +10,7 @@ import Login from './components/views/login.jsx';
 import Signup from './components/views/signup.jsx';
 import Profile from './components/views/profile.jsx';
 import Subjects from './components/views/subjects.jsx';
+import Subject from './components/views/subject.jsx';
 import axios from 'axios';
 
 class App extends Component {
@@ -37,9 +38,10 @@ class App extends Component {
 
 
 render((<Router history={ browserHistory }>
-        <Route path="/" component={ App } />
-        <Route path="/login" component={ Login } />
-        <Route path="/signup" component={ Signup } />
-        <Route path="/profile" component={ Profile } />
-        <Route path="/subjects" component={ Subjects } />
-      </Router>), document.getElementById('main'));
+          <Route path="/" component={ App } />
+          <Route path="/login" component={ Login } />
+          <Route path="/signup" component={ Signup } />
+          <Route path="/profile" component={ Profile } />
+          <Route path="/subjects" component={ Subjects } />
+          <Route path="/subjects/:subject" component={ Subject } />
+        </Router>), document.getElementById('main'));
