@@ -22,7 +22,7 @@ a:visited {
   align-items: center;
   height: 75px;
   padding: 0 10px 0 10px;
-  background-color: #6495ED;
+  background-color: #A2D3D2;
 }
 
 .link-container {
@@ -233,6 +233,7 @@ a:visited {
 .subject-container {
   display: flex;
   flex-direction: column;
+  background-color: #F2F4E3;
   padding: 0 30px 0 30px;
 }
 
@@ -250,8 +251,8 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 170px;
-  width: 10vw;
+  min-width: 120px;
+  width: 5vw;
   height: 30px;
   font-size: 16px;
   font-family: 'Copperplate Gothic Light, sans-serif';
@@ -260,6 +261,10 @@ a:visited {
   margin-right: 10px;
   color: white;
   cursor: pointer;
+}
+
+.subject-sort-btn:hover {
+  background-color: #98C1E0;
 }
 
 .subject-search {
@@ -283,14 +288,27 @@ a:visited {
 .subject-card {
   display: inline-block;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  line-height: 200px; 
-  border: 1px solid black;
+  min-width: 250px;
   width: 20vw;
   height: 200px;
   margin: 10px 10px 10px 10px;
+  box-shadow: 9px 9px 5px #888888;
+  background-color: aliceblue;
+}
+
+.subject-card-btn-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.subject-card-btn {
+  color: #A2D3D2;
+  cursor: pointer;
+}
+
+.subject-card-btn:hover {
+  color: #5EA8A7;
 }
 
 /* Footer Page*/
@@ -301,9 +319,8 @@ a:visited {
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  background-color: #6FB7BC;
+  background-color: #A2D3D2;
   padding: 10px 20px 10px 20px;
-  margin-top: 20px;
 }
 
 .footer-text {
