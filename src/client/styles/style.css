@@ -35,12 +35,12 @@ a:visited {
 .nav-link {
   margin: 0 10px 0 0 ;
   padding: 5px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   border-radius: 16px;  
 }
 
 .nav-link:hover {
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 .app-img-container {
