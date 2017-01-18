@@ -12,16 +12,13 @@ class Navbar extends Component {
         </div>
         <div className='link-container'>
           <div className='nav-link'>
-            <a href="/subjects">Subjects</a>
+            <a href='/subjects' className='nav-link-text'>Subjects</a>
           </div>
           <div className='nav-link'>
-            <a href="/mysubjects">My Subjects</a>
+            <a href='/review' className='nav-link-text'>Review</a>
           </div>
           <div className='nav-link'>
-            <a href="/review">Review</a>
-          </div>
-          <div className='nav-link'>
-            <a href="/profile">My Profile</a>
+            <a href='/profile' className='nav-link-text'>Profile</a>
           </div>
         </div>
       </div>
