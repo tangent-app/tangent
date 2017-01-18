@@ -8,7 +8,7 @@ class Navbar extends Component {
     return (
       <div className='nav-container'>
         <div className='brand-container'>
-          <div className='brand-img'>Tangent</div>
+          <div className='brand-img'>tangent</div>
         </div>
         <div className='link-container'>
           <div className='nav-link'>
