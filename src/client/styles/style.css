@@ -315,3 +315,11 @@ html, body {
 .footer-text {
   padding: 0 5px 0 10px;
 }
+
+.fa-pencil {
+  font-size: 14px;
+}
+
+.fa-envelope {
+  font-size: 12px;
+}

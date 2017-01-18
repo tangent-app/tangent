@@ -8,7 +8,7 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      email: '',
       password: ''
     }
     this._handleChange = this._handleChange.bind(this);
@@ -47,7 +47,7 @@ class Login extends Component {
             <form className='register-form' >
               <div className='register-input-container'>
                 <i className='fa fa-user register-input-icon' aria-hidden='true'></i>
-                <input className='register-input' value={ this.state.username } type='text' name='username' placeholder='username' onChange={ this._handleChange } />
+                <input className='register-input' value={ this.state.email } type='text' name='username' placeholder='username' onChange={ this._handleChange } />
               </div>
               <div className='register-input-container'>
                 <i className='fa fa-lock register-input-icon' aria-hidden='true'></i>

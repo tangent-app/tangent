@@ -67,8 +67,13 @@ module.exports = function(app, passport) {
 
   });
 
+  app.post('/api/signup', function(req, res) {
+    helpers.signUp(req.body, function(user) {
+      res.json(user);
+    });
+  });
+
   app.get('/api/checklogin', function(req, res) {
-    console.log('check login route', req.user);
     if(req.user) {
       helpers.checkLogin(req.user, function() {
 

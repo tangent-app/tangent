@@ -1,6 +1,9 @@
 'use strict';
 
-var Users = require('../models/users');
+const Users = require('../models/users');
+const bcrypt = require('bcrypt-nodejs');
+const jwt = require('jsonwebtoken');
+const secret = process.env.secret || 'hollabackyounginwootwoot';
 
 module.exports = {
   signIn: function(username, pw) {
@@ -10,6 +13,33 @@ module.exports = {
 
     //   return 'testing';
     // });
+  },
+
+  signUp: function(data, cb) {
+    let password = data.password;
+
+    Users.findOne( { email: data.email }, function(err, user) {
+      if(user) {
+        console.log('email already exists');
+        return cb(true)
+      } else {
+        
+        hash(password, function(err, hash) {
+          Users.create({
+            first_name: data.first_name,
+            last_name: data.last_name,
+            email: data.email,
+            password: hash,
+            token: tokenizer({
+              email: data.email
+            })
+          }, function(err, data) {
+            return cb(data);
+          });
+        });
+      }
+    });
+    
   },
 
   oAuthSignin: function(data, token, cb) {
@@ -55,5 +85,16 @@ module.exports = {
         
       }
     });
-  }
+  },
+
+};
+
+const hash = function(password, cb) {
+  bcrypt.genSalt(10, function(err, salt) {
+    bcrypt.hash(password, salt, null, cb);
+  });
+};
+
+const tokenizer = function(user) {
+  return jwt.sign(user, secret, { expiresIn: 600000 });
 };
