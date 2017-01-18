@@ -21,20 +21,19 @@ module.exports = {
     Users.findOne( { email: data.email }, function(err, user) {
       if(user) {
         console.log('email already exists');
-        return cb(true)
+        return cb('email already exists');
       } else {
         
+        let token = tokenizer({ name: data.first_name + data.last_name, email: data.email });
+
         hash(password, function(err, hash) {
           Users.create({
             first_name: data.first_name,
             last_name: data.last_name,
             email: data.email,
-            password: hash,
-            token: tokenizer({
-              email: data.email
-            })
+            password: hash
           }, function(err, data) {
-            return cb(data);
+            return cb({ user: data, token: token });
           });
         });
       }
@@ -57,11 +56,11 @@ module.exports = {
           oauth_id: data.id,
           first_name: first_name,
           last_name: last_name,
-          email: data.emails[0].value,
-          token: token
+          email: data.emails[0].value
         }, function(err, data) {
+          console.log('dataaaa', data);
           if(err) return console.error(err);
-          else return cb(data);
+          else return cb({ user: data, token: token });
         });
       }
 

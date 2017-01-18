@@ -29,6 +29,7 @@ module.exports = function(app, passport) {
       failureFlash : true
     }
   ), function(req, res) {
+
     res.redirect('/profile');
   });
   
@@ -36,18 +37,19 @@ module.exports = function(app, passport) {
 
 
   app.get('/api/profile', function(req, res) {
+    console.log('REQ USEr', req.user);
     if(!req.user) {
       res.json(false);
     }
     else {
       let data = {
-        _id: req.user._id,
-        email: req.user.email,
-        first_name: req.user.first_name,
-        last_name: req.user.last_name,
+        _id: req.user.user._id,
+        email: req.user.user.email,
+        first_name: req.user.user.first_name,
+        last_name: req.user.user.last_name,
         token: req.user.token
       };
-
+      console.log('DATAAAA', data);
       res.json(data);
     }
     
@@ -68,8 +70,8 @@ module.exports = function(app, passport) {
   });
 
   app.post('/api/signup', function(req, res) {
-    helpers.signUp(req.body, function(user) {
-      res.json(user);
+    helpers.signUp(req.body, function(data) {
+      res.json(data);
     });
   });
 

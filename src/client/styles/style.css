@@ -45,6 +45,8 @@ html, body {
   align-items: center;
 }
 
+/* Register Pages*/
+
 .register-main-container {
   display: flex;
   flex-direction: column;
@@ -156,6 +158,16 @@ html, body {
 .register-heading {
   font-family: 'Copperplate Gothic Light, sans-serif';
   font-size: 2.4em;
+}
+
+.register-res-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-family: Century Gothic, sans-serif;
+  font-size: 14px;
+  color: red;
 }
 
 .oauth-container {
