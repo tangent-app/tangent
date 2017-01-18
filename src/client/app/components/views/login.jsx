@@ -9,7 +9,8 @@ class Login extends Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      text: ''
     }
     this._handleChange = this._handleChange.bind(this);
     this._handleClick = this._handleClick.bind(this);
@@ -17,9 +18,10 @@ class Login extends Component {
 
   _handleChange(e) {
     var context = this;
-    if(e.target.name === 'username') {
-      this.setState({ username: e.target.value });
-    } else {
+    if(e.target.name === 'email') {
+      this.setState({ email: e.target.value });
+    } 
+    else {
       this.setState({ password: e.target.value });
     }
   }
@@ -27,11 +29,16 @@ class Login extends Component {
   _handleClick(e) {
     e.preventDefault();
     console.log(this.state);
-    axios.get('/api/signin')
-    .then(function(res) {
-      console.log('res', res);
+    axios.post('/api/signin', this.state)
+    .then((res) => {
+      if(typeof res.data === 'string') {
+        this.setState({ text: res.data });
+      } 
+      else {
+        this.props.router.push('/subjects');
+      }
     })
-    .catch(function(err) {
+    .catch((err) => {
       console.log(err);
     });
   }
@@ -47,14 +54,15 @@ class Login extends Component {
             <form className='register-form' >
               <div className='register-input-container'>
                 <i className='fa fa-user register-input-icon' aria-hidden='true'></i>
-                <input className='register-input' value={ this.state.email } type='text' name='username' placeholder='username' onChange={ this._handleChange } />
+                <input className='register-input' value={ this.state.email } type='text' name='email' placeholder='email' onChange={ this._handleChange } />
               </div>
               <div className='register-input-container'>
                 <i className='fa fa-lock register-input-icon' aria-hidden='true'></i>
-                <input className='register-input' value={ this.state.password } type='text' name='password' placeholder='password' onChange={ this._handleChange } />
+                <input className='register-input' value={ this.state.password } type='password' name='password' placeholder='password' onChange={ this._handleChange } />
               </div>
                 <div className='register-btn' type='submit' value='Submit' onClick={ this._handleClick }>Login</div>
             </form>
+            { this.state.text ? <div className='register-res-text'> { this.state.text } </div> : null }
           </div>
           <div className='oauth-container'>
             <a href='/login/google'>

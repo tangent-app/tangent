@@ -5,16 +5,8 @@ var helpers = require('../helpers/helpers');
 module.exports = function(app, passport) {
 
   app.get('/login/facebook', passport.authenticate('facebook', { scope : 'email' }));
-
-  // app.get('/login/facebook/return', passport.authenticate('facebook', { failureRedirect: '/login' }),
-  // function(req, res) {
-  //   helpers.oAuthSignin(req.user, function(data) {
-  //     if(data) res.redirect('/profile');
-  //   });
-  // });
   app.get('/login/facebook/return', passport.authenticate('facebook', 
     { 
-      // successRedirect : '/auth/facebook/login', 
       failureRedirect : '/',
       failureFlash : true
     }
@@ -24,7 +16,8 @@ module.exports = function(app, passport) {
 
   app.get('/login/google', passport.authenticate('google', { scope: [ 'profile', 'email' ] }));
   
-  app.get('/login/google/return', passport.authenticate('google', {
+  app.get('/login/google/return', passport.authenticate('google', 
+    {
       failureRedirect : '/',
       failureFlash : true
     }
@@ -37,7 +30,6 @@ module.exports = function(app, passport) {
 
 
   app.get('/api/profile', function(req, res) {
-    console.log('REQ USEr', req.user);
     if(!req.user) {
       res.json(false);
     }
@@ -49,21 +41,17 @@ module.exports = function(app, passport) {
         last_name: req.user.user.last_name,
         token: req.user.token
       };
-      console.log('DATAAAA', data);
       res.json(data);
     }
     
   });
 
-  app.get('/api/signin', function(req, res) {
-    // var username = req.body.data.username;
-    // var password = req.body.data.password;
+  app.post('/api/signin', function(req, res) {
+    console.log(req.body)
+    let email = req.body.email;
+    let password = req.body.password;
     
-    new Promise(function(resolve, reject) {
-      resolve(helpers.signIn());
-    })
-    .then(function(data) {
-      // console.log('ressss', data);
+    helpers.signIn({ email: email, password: password }, function(data) {
       res.json(data);
     });
 

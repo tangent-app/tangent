@@ -16,7 +16,6 @@ class Subjects extends Component {
     this._handleChange = this._handleChange.bind(this);
     this._handleClick = this._handleClick.bind(this);
     this._handleRoute = this._handleRoute.bind(this);
-    this.props = props;
   }
 
   _handleChange(e) {

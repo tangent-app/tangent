@@ -6,13 +6,20 @@ const jwt = require('jsonwebtoken');
 const secret = process.env.secret || 'hollabackyounginwootwoot';
 
 module.exports = {
-  signIn: function(username, pw) {
-    return 'asdfsadfsaf';
-    // Users.findOne({username: username}, function(err, user) {
-    //   if(err) return console.error(err);
-
-    //   return 'testing';
-    // });
+  signIn: function(data, cb) {
+    Users.findOne({ email: data.email }, function(err, user) {
+      if(err) return console.error(err);
+      if(!user) return cb('email does not exist');
+      else {
+        bcrypt.compare(data.password, user.password, function(err, valid) {
+          if(err) return console.error('encryption error');
+          else {
+            if(valid) return cb(user);
+            else return cb('incorrect password');
+          }
+        });
+      }
+    });
   },
 
   signUp: function(data, cb) {
