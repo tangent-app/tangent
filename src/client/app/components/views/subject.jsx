@@ -1,4 +1,8 @@
+'use strict';
+
 import React, { Component } from 'react';
+import Navbar from './navbar.jsx';
+import Footer from './footer.jsx';
 
 class Subject extends Component {
   
@@ -8,7 +12,10 @@ class Subject extends Component {
 
   render() {
     return (
-      <div>asdfasdf</div>
+      <div className='material-container'>
+        <Navbar />
+        <Footer />
+      </div>
     );
   }
 }

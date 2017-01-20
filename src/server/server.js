@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 8000;
 const URI = process.env.callbackURL ? process.env.MONGODB_URI : 'mongodb://localhost/tangent';
 mongoose.connect(URI);
 
-
+/* Remove user data */
 // Users.remove({}, function(err, user) {
 //   console.log('users removed');
 // });
@@ -27,6 +27,25 @@ mongoose.connect(URI);
 //   console.log('users', users);
 // })
 
+/* Add AP Lang Data */
+const APLang = require('./models/ap.lang');
+const langData = require('../sample-data/ap-lang-questions.json');
+
+// langData.forEach(function(data) {
+//   APLang.create({
+//     question_name: data.question_name,
+//     text: data.text,
+//     question: data.question,
+//     type: data.type,
+//     difficulty: data.difficulty,
+//   }, function(err, res) {
+//     console.log(res);
+//   });
+// });
+
+// APLang.find({}, function(err, data) {
+//   console.log(data);
+// });
 
 
 app.use(express.static(__dirname + '../../client'));
