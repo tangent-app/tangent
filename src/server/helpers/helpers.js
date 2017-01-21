@@ -1,6 +1,7 @@
 'use strict';
 
 const Users = require('../models/users');
+const APLang = require('../models/ap.lang');
 const bcrypt = require('bcrypt-nodejs');
 const jwt = require('jsonwebtoken');
 const secret = process.env.secret || 'hollabackyounginwootwoot';
@@ -85,13 +86,29 @@ module.exports = {
     });
   },
   checkLogin: function(data, cb) {
-    console.log('userrrr', data);
-    users.findOne( { email: data.emails[0].value }, function(err, user) {
+    Users.findOne( { email: data.emails[0].value }, function(err, user) {
       if(user.token) {
         
       }
     });
   },
+
+  getMaterial: function(email, cb) {
+    Users.findOne({ email: email }, function(err, user) {
+      if(err) return console.error(err);
+      else {
+        APLang.find({}, function(err, data) {
+          if(err) return console.error(err);
+          else {
+            let filteredQuestions = data.filter(function(question) {
+              return user.subjects.subject.reviewed.indexOf(question['question-name'] < 0);
+            });
+            return cb(filteredQuestions);
+          }
+        });
+      }
+    });
+  }
 
 };
 

@@ -7,7 +7,13 @@ var Users = new Schema({
   email: String,
   username: String,
   password: String,
-  oauth_id: String
+  oauth_id: String,
+  subjects: {
+    subject: {
+      name: String,
+      reviewed: Array
+    }
+  }
 });
 
 module.exports = mongoose.model('Users', Users);

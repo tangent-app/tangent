@@ -31,6 +31,9 @@ mongoose.connect(URI);
 const APLang = require('./models/ap.lang');
 const langData = require('../sample-data/ap-lang-questions.json');
 
+// APLang.remove({}, function(err, x) {
+//   console.log('x', x);
+// });
 // langData.forEach(function(data) {
 //   APLang.create({
 //     question_name: data.question_name,

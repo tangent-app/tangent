@@ -358,3 +358,30 @@ html, body {
 .fa-envelope {
   font-size: 12px;
 }
+
+/* Question Page */
+
+.material-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-answer-choices {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+
+.material-choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px 0 10px;
+  background-color: aliceblue;
+}

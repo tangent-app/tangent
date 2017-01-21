@@ -73,5 +73,12 @@ module.exports = function(app, passport) {
     }
   });
  
+  app.post('/api/subject/:name', function(req, res) {
+    let email = req.body.email;
+    console.log(req.params.name, req.body);
+    helpers.getMaterial(email, function(data) {
+      res.json(data);
+    });
+  });
 }
 
