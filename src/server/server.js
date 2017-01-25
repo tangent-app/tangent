@@ -39,6 +39,7 @@ const langData = require('../sample-data/ap-lang-questions.json');
 //     question_name: data.question_name,
 //     text: data.text,
 //     question: data.question,
+//     answer: data.answer,
 //     type: data.type,
 //     difficulty: data.difficulty,
 //   }, function(err, res) {

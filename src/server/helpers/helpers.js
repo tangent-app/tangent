@@ -100,16 +100,84 @@ module.exports = {
         APLang.find({}, function(err, data) {
           if(err) return console.error(err);
           else {
-            let filteredQuestions = data.filter(function(question) {
-              return user.subjects.subject.reviewed.indexOf(question['question-name'] < 0);
+            
+            if(user.subjects.length < 1) return cb(data);
+
+            let reviewedData = [];
+
+            user.subjects.forEach(function(subject) {
+              subject.reviewed.forEach(function(material) {
+                reviewedData.push(material.question_name);
+              });
             });
-            return cb(filteredQuestions);
+
+
+            console.log(reviewedData);
+            let filteredData = data.filter(function(questions) {
+              return reviewedData.indexOf(questions.question_name) < 0;
+            });
+
+            return cb(filteredData);
           }
+
+
+        });
+      }
+    });
+
+
+     // subjects: [
+    //   { 
+    //     subject_name: String,
+    //     reviewed: [
+    //       question_name: String,
+    //       correct: Boolean,
+    //       difficulty: String,
+    //       type: String
+    //     ]
+    //   }
+    // ]
+  },
+
+  updateUserMaterial: function(email, subject, question, cb) {
+    Users.findOne({ email: email }, function(err, user) {
+      if(err) return console.error(err);
+      else {
+
+        if(user.subjects.length < 1) user.subjects.push( { subject_name: subject } );
+
+        if(user.subjects[user.subjects.length - 1].subject_name !== subject) user.subjects.push( { subject_name: subject } );
+        
+
+        
+        user.subjects.forEach(function(data) {
+          console.log(data);
+          if(data.subject_name === subject) {
+            if(data.reviewed.length < 1) data.reviewed.push({ question_name: question });
+
+            if(data.reviewed[data.reviewed.length - 1].question_name !== question) {
+              data.reviewed.push({
+                question_name: question,
+              });
+            }
+          }
+        });
+        
+       
+        
+
+
+        user.save(function (err) {
+          if(err) return console.error(err);
+
+          else {
+            console.log(user);
+            return cb(user);
+          } 
         });
       }
     });
   }
-
 };
 
 const hash = function(password, cb) {

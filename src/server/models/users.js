@@ -8,12 +8,16 @@ var Users = new Schema({
   username: String,
   password: String,
   oauth_id: String,
-  subjects: {
-    subject: {
-      name: String,
+  subjects: [
+    { 
+      subject_name: String,
       reviewed: Array
     }
-  }
+  ]
 });
 
 module.exports = mongoose.model('Users', Users);
+
+/*
+
+*/

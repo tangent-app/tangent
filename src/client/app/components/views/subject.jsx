@@ -12,18 +12,29 @@ class Subject extends Component {
     this.state = {
       data: ''
     };
+    this._handleSubmit = this._handleSubmit.bind(this);
   }
 
   componentWillMount() {
     axios.post('/api/subject/' + this.props.routeParams.subject, { email: localStorage.getItem('email')})
     .then((res) => {
-      console.log(res.data[0].question);
+      console.log(res.data);
       this.setState({ data: res.data });
     })
     .catch((err) => {
       return console.log(err);
     });
 
+  }
+
+  _handleSubmit() {
+    axios.post('/api/subject/' + this.props.routeParams.subject + '/' + this.state.data[0].question_name, { email: localStorage.getItem('email') })
+    .then((res) => {
+      console.log('answer submitted', res);
+    })
+    .catch((err) => {
+      return console.log(err);
+    });
   }
 
 /* 
@@ -79,7 +90,7 @@ class Subject extends Component {
             <div className='material-choice'>E</div>
           </div>
           <div className='material-submit-container'>
-            <div className='material-submit-btn'>Submit</div>
+            <div className='material-submit-btn' onClick={ this._handleSubmit } >Submit</div>
             <div className='material-skip-btn'>Skip</div>
           </div>
         </div>

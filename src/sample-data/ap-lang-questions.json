@@ -3,169 +3,255 @@
     "question_name": "16-1-1",
     "text": "../../../images/2016/p1/b/b1.png",
     "question": "../../../images/2016/p1/q/q1.png",
-    "type": "",
-    "difficulty": ""
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "m"
   }, 
   {
     "question_name": "16-1-2",
     "text": "../../../images/2016/p1/b/b2.png",
-    "question": "../../../images/2016/p1/q/q2.png"
+    "question": "../../../images/2016/p1/q/q2.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "h"
   },
   {
     "question_name": "16-1-3",
     "text": "../../../images/2016/p1/b/b3.png",
-    "question": "ur l(../images/2016/p1/q/q3.png"
+    "question": "../../../images/2016/p1/q/q3.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-1-4",
     "text": "../../../images/2016/p1/b/b4.png",
-    "question": "../../../images/2016/p1/q/q4.png"
+    "question": "../../../images/2016/p1/q/q4.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-1-5",
     "text": "../../../images/2016/p1/b/b4.png",
-    "question": "../../../images/2016/p1/q/q4.png"
+    "question": "../../../images/2016/p1/q/q4.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-1-6",
     "text": "../../../images/2016/p1/b/b6.png",
-    "question": "../../../images/2016/p1/q/q6.png"
+    "question": "../../../images/2016/p1/q/q6.png",
+    "answer": "e",
+    "type": "par-fun",
+    "difficulty": "h"
   },
   {
     "question_name": "16-1-7",
     "text": "../../../images/2016/p1/b/b7.png",
-    "question": "../../../images/2016/p1/q/q7.png"
+    "question": "../../../images/2016/p1/q/q7.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "16-1-8",
     "text": "../../../images/2016/p1/b/b8.png",
-    "question": "../../../images/2016/p1/q/q8.png"
+    "question": "../../../images/2016/p1/q/q8.png",
+    "answer": "d",
+    "type": "eff",
+    "difficulty": "h"
   },
   {
     "question_name": "16-1-9",
     "text": "../../../images/2016/p1/b/b9.png",
-    "question": "../../../images/2016/p1/q/q9.png"
+    "question": "../../../images/2016/p1/q/q9.png",
+    "answer": "d",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-1-10",
     "text": "../../../images/2016/p1/b/b10.png",
-    "question": "../../../images/2016/p1/q/q10.png"
+    "question": "../../../images/2016/p1/q/q10.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-1-11",
     "text": "../../../images/2016/p1/b/b11.png",
-    "question": "../../../images/2016/p1/q/q11.png"
+    "question": "../../../images/2016/p1/q/q11.png",
+    "answer": "a",
+    "type": "eff",
+    "difficulty": "h"
   },
   {
     "question_name": "16-1-12",
     "text": "../../../images/2016/p1/b/b12.png",
-    "question": "../../../images/2016/p1/q/q12.png"
+    "question": "../../../images/2016/p1/q/q12.png",
+    "answer": "c",
+    "type": "eff",
+    "difficulty": "m"
   },
   {
     "question_name": "16-1-13",
     "text": "../../../images/2016/p1/b/b13.png",
-    "question": "../../../images/2016/p1/q/q13.png"
+    "question": "../../../images/2016/p1/q/q13.png",
+    "answer": "b",
+    "type": "par-fun",
+    "difficulty": "m"
   },
   {
     "question_name": "16-1-14",
     "text": "../../../images/2016/p1/b/b14.png",
-    "question": "../../../images/2016/p1/q/q14.png"
+    "question": "../../../images/2016/p1/q/q14.png",
+    "answer": "e",
+    "type": "strat",
+    "difficulty": "m"
   },
   {
     "question_name": "16-1-15",
     "text": "../../../images/2016/p1/b/b15.png",
-    "question": "../../../images/2016/p1/q/q15.png"
+    "question": "../../../images/2016/p1/q/q15.png",
+    "answer": "d",
+    "type": "comp",
+    "difficulty": "h"
   },
 
 
   {
     "question_name": "16-2-16",
     "text": "../../../images/2016/p2/b/b16.png",
-    "question": "../../../images/2016/p2/q/q16.png"
+    "question": "../../../images/2016/p2/q/q16.png",
+    "answer": "b",
+    "type": "eff",
+    "difficulty": "m"
   },
   {
     "question_name": "16-2-17",
     "text": "../../../images/2016/p2/b/b17.png",
-    "question": "../../../images/2016/p2/q/q17.png"
+    "question": "../../../images/2016/p2/q/q17.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-2-18",
     "text": "../../../images/2016/p2/b/b18.png",
-    "question": "../../../images/2016/p2/q/q18.png"
+    "question": "../../../images/2016/p2/q/q18.png",
+    "answer": "e",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "16-2-19",
     "text": "../../../images/2016/p2/b/b19.png",
-    "question": "../../../images/2016/p2/q/q19.png"
+    "question": "../../../images/2016/p2/q/q19.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-2-20",
     "text": "../../../images/2016/p2/b/b20.png",
-    "question": "../../../images/2016/p2/q/q20.png"
+    "question": "../../../images/2016/p2/q/q20.png",
+    "answer": "c",
+    "type": "eff",
+    "difficulty": "e"
   },
   {
     "question_name": "16-2-21",
     "text": "../../../images/2016/p2/b/b21.png",
-    "question": "../../../images/2016/p2/q/q21.png"
+    "question": "../../../images/2016/p2/q/q21.png",
+    "answer": "c",
+    "type": "sen-fun",
+    "difficulty": "h"
   },
   {
     "question_name": "16-1-22",
     "text": "../../../images/2016/p2/b/b22.png",
-    "question": "../../../images/2016/p2/q/q22.png"
+    "question": "../../../images/2016/p2/q/q22.png",
+    "answer": "d",
+    "type": "foot",
+    "difficulty": "e"
   },
   {
     "question_name": "16-2-23",
     "text": "../../../images/2016/p2/b/b23.png",
-    "question": "../../../images/2016/p2/q/q23.png"
+    "question": "../../../images/2016/p2/q/q23.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-2-24",
     "text": "../../../images/2016/p2/b/b24.1.png",
     "text-2": "../../../images/2016/p2/b24.2.png",
-    "question": "../../../images/2016/p2/q/q24.png"
+    "question": "../../../images/2016/p2/q/q24.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "16-2-25",
     "text": "../../../images/2016/p2/b/b25.png",
-    "question": "../../../images/2016/p2/q/q25.png"
+    "question": "../../../images/2016/p2/q/q25.png",
+    "answer": "b",
+    "type": "foot",
+    "difficulty": "e"
   },
   {
     "question_name": "16-2-26",
     "text": "../../../images/2016/p2/b/b26.png",
-    "question": "../../../images/2016/p2/q/q26.png"
+    "question": "../../../images/2016/p2/q/q26.png",
+    "answer": "e",
+    "type": "foot",
+    "difficulty": "e"
   },
   {
     "question_name": "16-2-27",
     "text": "../../../images/2016/p2/b/b27.png",
-    "question": "../../../images/2016/p2/q/q27.png"
-  },
-  {
-    "question_name": "16-1-18",
-    "text": "../../../images/2016/p2/b/b18.png",
-    "question": "../../../images/2016/p2/q/q18.png"
+    "question": "../../../images/2016/p2/q/q27.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-2-28",
     "text": "../../../images/2016/p2/b/b28.1.png",
     "text-2": "../../../images/2016/p2/b28.2.png",
-    "question": "../../../images/2016/p2/q/q28.png"
+    "question": "../../../images/2016/p2/q/q28.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-2-29",
     "text": "../../../images/2016/p2/b/b29.png",
-    "question": "../../../images/2016/p2/q/q29.png"
+    "question": "../../../images/2016/p2/q/q29.png",
+    "answer": "d",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-2-30",
     "text": "../../../images/2016/p2/b/b30.1.png",
     "text-2": "../../../images/2016/p2/b30.2.png",
-    "question": "../../../images/2016/p2/q/q30.png"
+    "question": "../../../images/2016/p2/q/q30.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-2-31",
     "text": "../../../images/2016/p2/b/b31.1.png",
     "text-2": "../../../images/2016/p2/b31.2.png",
-    "question": "../../../images/2016/p2/q/q31.png"
+    "question": "../../../images/2016/p2/q/q31.png",
+    "answer": "c",
+    "type": "tone",
+    "difficulty": "m"
   },
 
 
@@ -173,135 +259,207 @@
     "question_name": "16-3-32",
     "text": "../../../images/2016/p3/b/b32.1.png",
     "text-2": "../../../images/2016/p3/b32.2.png",
-    "question": "../../../images/2016/p3/q/q32.png"
+    "question": "../../../images/2016/p3/q/q32.png",
+    "answer": "e",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-3-33",
     "text": "../../../images/2016/p3/b/b33.png",
-    "question": "../../../images/2016/p3/q/q33.png"
+    "question": "../../../images/2016/p3/q/q33.png",
+    "answer": "e",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-3-34",
     "text": "../../../images/2016/p3/b/b34.png",
-    "question": "../../../images/2016/p3/q/q34.png"
+    "question": "../../../images/2016/p3/q/q34.png",
+    "answer": "c",
+    "type": "eff",
+    "difficulty": "e"
   },
   {
     "question_name": "16-3-35",
     "text": "../../../images/2016/p3/b/b35.png",
-    "question": "../../../images/2016/p3/q/q35.png"
+    "question": "../../../images/2016/p3/q/q35.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-1-36",
     "text": "../../../images/2016/p3/b/b36.1.png",
     "text-2": "../../../images/2016/p3/b36.2.png",
-    "question": "../../../images/2016/p3/q/q36.png"
+    "question": "../../../images/2016/p3/q/q36.png",
+    "answer": "d",
+    "type": "struc",
+    "difficulty": "e"
   },
   {
     "question_name": "16-3-37",
     "text": "../../../images/2016/p3/b/b37.1.png",
     "text-2": "../../../images/2016/p3/b37.2.png",
-    "question": "../../../images/2016/p3/q/q37.png"
+    "question": "../../../images/2016/p3/q/q37.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-3-38",
     "text": "../../../images/2016/p3/b/b38.1.png",
     "text-2": "../../../images/2016/p3/b38.2.png",
-    "question": "../../../images/2016/p3/q/q38.png"
+    "question": "../../../images/2016/p3/q/q38.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "16-3-39",
     "text": "../../../images/2016/p3/b/b39.png",
-    "question": "../../../images/2016/p3/q/q39.png"
+    "question": "../../../images/2016/p3/q/q39.png",
+    "answer": "b",
+    "type": "eff",
+    "difficulty": "m"
   },
   {
     "question_name": "16-3-40",
     "text": "../../../images/2016/p3/b/b40.png",
-    "question": "../../../images/2016/p3/q/q40.png"
+    "question": "../../../images/2016/p3/q/q40.png",
+    "answer": "c",
+    "type": "eff",
+    "difficulty": "h"
   },
   {
     "question_name": "16-3-41",
     "text": "../../../images/2016/p3/b/b41.png",
-    "question": "../../../images/2016/p3/q/q41.png"
+    "question": "../../../images/2016/p3/q/q41.png",
+    "answer": "c",
+    "type": "eff",
+    "difficulty": "h"
   },
   {
     "question_name": "16-3-42",
     "text": "../../../images/2016/p3/b/b42.1.png",
     "text-2": "../../../images/2016/p3/b42.2.png",
-    "question": "../../../images/2016/p3/q/q42.png"
+    "question": "../../../images/2016/p3/q/q42.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-3-43",
     "text": "../../../images/2016/p3/b/b43.1.png",
     "text-2": "../../../images/2016/p3/b43.2.png",
-    "question": "../../../images/2016/p3/q/q43.png"
+    "question": "../../../images/2016/p3/q/q43.png",
+    "answer": "d",
+    "type": "tone",
+    "difficulty": "h"
   },
 
 
   {
     "question_name": "16-4-44",
     "text": "../../../images/2016/p4/b/b44.png",
-    "question": "../../../images/2016/p4/q/q44.png"
+    "question": "../../../images/2016/p4/q/q44.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "h"
   },
   {
     "question_name": "16-4-45",
     "text": "../../../images/2016/p4/b/b45.png",
-    "question": "../../../images/2016/p4/q/q45.png"
+    "question": "../../../images/2016/p4/q/q45.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "16-4-46",
     "text": "../../../images/2016/p4/b/b46.png",
-    "question": "../../../images/2016/p4/q/q46.png"
+    "question": "../../../images/2016/p4/q/q46.png",
+    "answer": "e",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-4-47",
     "text": "../../../images/2016/p4/b/b47.1.png",
     "text-2": "../../../images/2016/p4/b47.2.png",
-    "question": "../../../images/2016/p4/q/q47.png"
+    "question": "../../../images/2016/p4/q/q47.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "16-4-48",
     "text": "../../../images/2016/p4/b/b48.png",
-    "question": "../../../images/2016/p4/q/q48.png"
+    "question": "../../../images/2016/p4/q/q48.png",
+    "answer": "c",
+    "type": "eff",
+    "difficulty": "e"
   },
   {
     "question_name": "16-4-49",
     "text": "../../../images/2016/p4/b/b49.1.png",
     "text-2": "../../../images/2016/p4/b49.2.png",
-    "question": "../../../images/2016/p4/q/q49.png"
+    "question": "../../../images/2016/p4/q/q49.png",
+    "answer": "e",
+    "type": "eff",
+    "difficulty": "m"
   },
   {
     "question_name": "16-4-50",
     "text": "../../../images/2016/p4/b/b50.png",
-    "question": "../../../images/2016/p4/q/q50.png"
+    "question": "../../../images/2016/p4/q/q50.png",
+    "answer": "d",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "16-4-51",
     "text": "../../../images/2016/p4/b/b51.1.png",
     "text-2": "../../../images/2016/p4/b51.2.png",
-    "question": "../../../images/2016/p4/q/q51.png"
+    "question": "../../../images/2016/p4/q/q51.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "h"
   },
   {
     "question_name": "16-4-52",
     "text": "../../../images/2016/p4/b/b52.png",
-    "question": "../../../images/2016/p4/q/q52.png"
+    "question": "../../../images/2016/p4/q/q52.png",
+    "answer": "d",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "16-4-53",
     "text": "../../../images/2016/p4/b/b53.1.png",
     "text-2": "../../../images/2016/p4/b53.2.png",
-    "question": "../../../images/2016/p4/q/q53.png"
+    "question": "../../../images/2016/p4/q/q53.png",
+    "answer": "e",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "16-4-54",
     "text": "../../../images/2016/p4/b/b54.1.png",
     "text-2": "../../../images/2016/p4/b54.2.png",
-    "question": "../../../images/2016/p4/q/q54.png"
+    "question": "../../../images/2016/p4/q/q54.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "16-4-55",
     "text": "../../../images/2016/p4/b/b55.1.png",
     "text-2": "../../../images/2016/p4/b55.2.png",
-    "question": "../../../images/2016/p4/q/q55.png"
+    "question": "../../../images/2016/p4/q/q55.png",
+    "answer": "c",
+    "type": "tone",
+    "difficulty": "e"
   },
 
 
@@ -309,58 +467,91 @@
   {
     "question_name": "15-1-1",
     "text": "../../../images/2015/p1/b/b1.png",
-    "question": "../../../images/2015/p1/q/q1.png"
+    "question": "../../../images/2015/p1/q/q1.png",
+    "answer": "c",
+    "type": "tone",
+    "difficulty": "h"
   },
   {
     "question_name": "15-1-2",
     "text": "../../../images/2015/p1/b/b2.png",
-    "question": "../../../images/2015/p1/q/q2.png"
+    "question": "../../../images/2015/p1/q/q2.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "15-1-3",
     "text": "../../../images/2015/p1/b/b3.png",
-    "question": "../../../images/2015/p1/q/q3.png"
+    "question": "../../../images/2015/p1/q/q3.png",
+    "answer": "b",
+    "type": "eff",
+    "difficulty": "e"
   },
   {
     "question_name": "15-1-4",
     "text": "../../../images/2015/p1/b/b4.png",
-    "question": "../../../images/2015/p1/q/q4.png"
+    "question": "../../../images/2015/p1/q/q4.png",
+    "answer": "d",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "15-1-5",
     "text": "../../../images/2015/p1/b/b5.png",
-    "question": "../../../images/2015/p1/q/q5.png"
+    "question": "../../../images/2015/p1/q/q5.png",
+    "answer": "e",
+    "type": "eff",
+    "difficulty": "e"
   },
   {
     "question_name": "15-1-6",
     "text": "../../../images/2015/p1/b/b6.png",
-    "question": "../../../images/2015/p1/q/q6.png"
+    "question": "../../../images/2015/p1/q/q6.png",
+    "answer": "c",
+    "type": "sen-fun",
+    "difficulty": "e"
   },
   {
     "question_name": "15-1-7",
     "text": "../../../images/2015/p1/b/b7.png",
-    "question": "../../../images/2015/p1/q/q7.png"
+    "question": "../../../images/2015/p1/q/q7.png",
+    "answer": "a",
+    "type": "dic",
+    "difficulty": "e"
   },
   {
     "question_name": "15-1-8",
     "text": "../../../images/2015/p1/b/b8.png",
-    "question": "../../../images/2015/p1/q/q8.png"
+    "question": "../../../images/2015/p1/q/q8.png",
+    "answer": "e",
+    "type": "sen-fun",
+    "difficulty": "e"
   },
   {
     "question_name": "15-1-9",
     "text": "../../../images/2015/p1/b/b9.png",
-    "question": "../../../images/2015/p1/q/q9.png"
+    "question": "../../../images/2015/p1/q/q9.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "15-1-10",
     "text": "../../../images/2015/p1/b/b10.png",
-    "question": "../../../images/2015/p1/q/q10.png"
+    "question": "../../../images/2015/p1/q/q10.png",
+    "answer": "a",
+    "type": "sen-fun",
+    "difficulty": "m"
   },
   {
     "question_name": "15-1-11",
     "text": "../../../images/2015/p1/b/b11.1.png",
     "text-2": "../../../images/2015/p1/b/b11.2.png",
-    "question": "../../../images/2015/p1/q/q11.png"
+    "question": "../../../images/2015/p1/q/q11.png",
+    "answer": "b",
+    "type": "tone",
+    "difficulty": "h"
   },
 
 
@@ -369,75 +560,117 @@
   {
     "question_name": "15-2-12",
     "text": "../../../images/2015/p2/b/b12.png",
-    "question": "../../../images/2015/p2/q/q12.png"
+    "question": "../../../images/2015/p2/q/q12.png",
+    "answer": "d",
+    "type": "strat",
+    "difficulty": "e"
   },
   {
     "question_name": "15-2-13",
     "text": "../../../images/2015/p2/b/b13.png",
-    "question": "../../../images/2015/p2/q/q13.png"
+    "question": "../../../images/2015/p2/q/q13.png",
+    "answer": "c",
+    "type": "tone",
+    "difficulty": "m"
   },
   {
     "question_name": "15-2-14",
     "text": "../../../images/2015/p2/b/b14.png",
-    "question": "../../../images/2015/p2/q/q14.png"
+    "question": "../../../images/2015/p2/q/q14.png",
+    "answer": "e",
+    "type": "foot",
+    "difficulty": "e"
   },
   {
     "question_name": "15-2-15",
     "text": "../../../images/2015/p2/b/b15.png",
-    "question": "../../../images/2015/p2/q/q15.png"
+    "question": "../../../images/2015/p2/q/q15.png",
+    "answer": "e",
+    "type": "eff",
+    "difficulty": "h"
   },
   {
     "question_name": "15-2-16",
     "text": "../../../images/2015/p2/b/b16.png",
-    "question": "../../../images/2015/p2/q/q16.png"
+    "question": "../../../images/2015/p2/q/q16.png",
+    "answer": "c",
+    "type": "note",
+    "difficulty": "h"
   },
   {
     "question_name": "15-2-17",
     "text": "../../../images/2015/p2/b/b17.png",
-    "question": "../../../images/2015/p2/q/q17.png"
+    "question": "../../../images/2015/p2/q/q17.png",
+    "answer": "a",
+    "type": "sen-fun",
+    "difficulty": "m"
   },
   {
     "question_name": "15-2-18",
     "text": "../../../images/2015/p2/b/b18.png",
-    "question": "../../../images/2015/p2/q/q18.png"
+    "question": "../../../images/2015/p2/q/q18.png",
+    "answer": "c",
+    "type": "dic",
+    "difficulty": "e"
   },
   {
     "question_name": "15-2-19",
     "text": "../../../images/2015/p2/b/b19.png",
-    "question": "../../../images/2015/p2/q/q19.png"
+    "question": "../../../images/2015/p2/q/q19.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "15-2-20",
     "text": "../../../images/2015/p2/b/b20.png",
-    "question": "../../../images/2015/p2/q/q20.png"
+    "question": "../../../images/2015/p2/q/q20.png",
+    "answer": "b",
+    "type": "strat",
+    "difficulty": "m"
   },
   {
     "question_name": "15-2-21",
     "text": "../../../images/2015/p2/b/b21.png",
-    "question": "../../../images/2015/p2/q/q21.png"
+    "question": "../../../images/2015/p2/q/q21.png",
+    "answer": "a",
+    "type": "note",
+    "difficulty": "e"
   },
   {
     "question_name": "15-2-22",
     "text": "../../../images/2015/p2/b/b22.png",
-    "question": "../../../images/2015/p2/q/q22.png"
+    "question": "../../../images/2015/p2/q/q22.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "15-2-23",
     "text": "../../../images/2015/p2/b/b23.1.png",
     "text-2": "../../../images/2015/p2/b/b23.2.png",
-    "question": "../../../images/2015/p2/q/q23.png"
+    "question": "../../../images/2015/p2/q/q23.png",
+    "answer": "d",
+    "type": "strat",
+    "difficulty": "h"
   },
   {
     "question_name": "15-2-24",
     "text": "../../../images/2015/p2/b/b24.1.png",
     "text-2": "../../../images/2015/p2/b/b24.2.png",
-    "question": "../../../images/2015/p2/q/q24.png"
+    "question": "../../../images/2015/p2/q/q24.png",
+    "answer": "b",
+    "type": "tone",
+    "difficulty": "e"
   },
   {
     "question_name": "15-2-25",
     "text": "../../../images/2015/p2/b/b25.1.png",
     "text-2": "../../../images/2015/p2/b/b25.2.png",
-    "question": "../../../images/2015/p2/q/q25.png"
+    "question": "../../../images/2015/p2/q/q25.png",
+    "answer": "a",
+    "type": "summ",
+    "difficulty": "e"
   },
 
 
@@ -446,76 +679,118 @@
   {
     "question_name": "15-3-26",
     "text": "../../../images/2015/p3/b/b26.png",
-    "question": "../../../images/2015/p3/q/q26.png"
+    "question": "../../../images/2015/p3/q/q26.png",
+    "answer": "b",
+    "type": "strat",
+    "difficulty": "h"
   },
   {
     "question_name": "15-3-27",
     "text": "../../../images/2015/p3/b/b27.png",
-    "question": "../../../images/2015/p3/q/q27.png"
+    "question": "../../../images/2015/p3/q/q27.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "15-3-28",
     "text": "../../../images/2015/p3/b/b28.png",
-    "question": "../../../images/2015/p3/q/q28.png"
+    "question": "../../../images/2015/p3/q/q28.png",
+    "answer": "d",
+    "type": "sen-fun",
+    "difficulty": "h"
   },
   {
     "question_name": "15-3-29",
     "text": "../../../images/2015/p3/b/b29.png",
-    "question": "../../../images/2015/p3/q/q29.png"
+    "question": "../../../images/2015/p3/q/q29.png",
+    "answer": "b",
+    "type": "strat",
+    "difficulty": "m"
   },
   {
     "question_name": "15-3-30",
     "text": "../../../images/2015/p3/b/b30.png",
-    "question": "../../../images/2015/p3/q/q30.png"
+    "question": "../../../images/2015/p3/q/q30.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "15-3-31",
     "text": "../../../images/2015/p3/b/b31.png",
-    "question": "../../../images/2015/p3/q/q31.png"
+    "question": "../../../images/2015/p3/q/q31.png",
+    "answer": "c",
+    "type": "tone",
+    "difficulty": "h"
   },
   {
     "question_name": "15-3-32",
     "text": "../../../images/2015/p3/b/b32.png",
-    "question": "../../../images/2015/p3/q/q32.png"
+    "question": "../../../images/2015/p3/q/q32.png",
+    "answer": "e",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "15-3-33",
     "text": "../../../images/2015/p3/b/b33.1.png",
     "text-2": "../../../images/2015/p3/b/b33.2.png",
-    "question": "../../../images/2015/p3/q/q33.png"
+    "question": "../../../images/2015/p3/q/q33.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "15-2-34",
     "text": "../../../images/2015/p3/b/b34.1.png",
     "text-2": "../../../images/2015/p3/b/b34.2.png",
-    "question": "../../../images/2015/p3/q/q34.png"
+    "question": "../../../images/2015/p3/q/q34.png",
+    "answer": "d",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "15-3-35",
     "text": "../../../images/2015/p3/b/b35.png",
-    "question": "../../../images/2015/p3/q/q35.png"
+    "question": "../../../images/2015/p3/q/q35.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "15-3-36",
     "text": "../../../images/2015/p3/b/b36.1.png",
     "text-2": "../../../images/2015/p3/b/b36.2.png",
-    "question": "../../../images/2015/p3/q/q36.png"
+    "question": "../../../images/2015/p3/q/q36.png",
+    "answer": "e",
+    "type": "eff",
+    "difficulty": "m"
   },
   {
     "question_name": "15-3-37",
     "text": "../../../images/2015/p3/b/b37.png",
-    "question": "../../../images/2015/p3/q/q37.png"
+    "question": "../../../images/2015/p3/q/q37.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "h"
   },
   {
     "question_name": "15-3-38",
     "text": "../../../images/2015/p3/b/b38.png",
-    "question": "../../../images/2015/p3/q/q38.png"
+    "question": "../../../images/2015/p3/q/q38.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "h"
   },
   {
     "question_name": "15-3-39",
     "text": "../../../images/2015/p3/b/b39.1.png",
     "text-2": "../../../images/2015/p3/b/b39.2.png",
-    "question": "../../../images/2015/p3/q/q39.png"
+    "question": "../../../images/2015/p3/q/q39.png",
+    "answer": "d",
+    "type": "struc",
+    "difficulty": "h"
   },
 
 
@@ -527,85 +802,133 @@
     "question_name": "15-4-40",
     "text": "../../../images/2015/p4/b/b40.1.png",
     "text-2": "../../../images/2015/p4/b/b40.2.png",
-    "question": "../../../images/2015/p4/q/q40.png"
+    "question": "../../../images/2015/p4/q/q40.png",
+    "answer": "e",
+    "type": "summ",
+    "difficulty": "m"
   },
   {
     "question_name": "15-4-41",
     "text": "../../../images/2015/p4/b/b41.png",
-    "question": "../../../images/2015/p4/q/q41.png"
+    "question": "../../../images/2015/p4/q/q41.png",
+    "answer": "d",
+    "type": "dic",
+    "difficulty": "e"
   },
   {
     "question_name": "15-4-42",
     "text": "../../../images/2015/p4/b/b42.png",
-    "question": "../../../images/2015/p4/q/q42.png"
+    "question": "../../../images/2015/p4/q/q42.png",
+    "answer": "c",
+    "type": "tone",
+    "difficulty": "e"
   },
   {
     "question_name": "15-4-43",
     "text": "../../../images/2015/p4/b/b43.png",
-    "question": "../../../images/2015/p4/q/q43.png"
+    "question": "../../../images/2015/p4/q/q43.png",
+    "answer": "b",
+    "type": "dic",
+    "difficulty": "e"
   },
   {
     "question_name": "15-4-44",
     "text": "../../../images/2015/p4/b/b44.png",
-    "question": "../../../images/2015/p4/q/q44.png"
+    "question": "../../../images/2015/p4/q/q44.png",
+    "answer": "d",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "15-4-45",
     "text": "../../../images/2015/p4/b/b45.png",
-    "question": "../../../images/2015/p4/q/q45.png"
+    "question": "../../../images/2015/p4/q/q45.png",
+    "answer": "d",
+    "type": "eff",
+    "difficulty": "e"
   },
   {
     "question_name": "15-4-46",
     "text": "../../../images/2015/p4/b/b46.png",
-    "question": "../../../images/2015/p4/q/q46.png"
+    "question": "../../../images/2015/p4/q/q46.png",
+    "answer": "b",
+    "type": "sen-fun",
+    "difficulty": "h"
   },
   {
     "question_name": "15-4-47",
     "text": "../../../images/2015/p4/b/b47.png",
-    "question": "../../../images/2015/p4/q/q47.png"
+    "question": "../../../images/2015/p4/q/q47.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "15-4-48",
     "text": "../../../images/2015/p4/b/b48.1.png",
     "text-2": "../../../images/2015/p4/b/b48.2.png",
-    "question": "../../../images/2015/p4/q/q48.png"
+    "question": "../../../images/2015/p4/q/q48.png",
+    "answer": "b",
+    "type": "par-fun",
+    "difficulty": "m"
   },
   {
     "question_name": "15-4-49",
     "text": "../../../images/2015/p4/b/b49.png",
-    "question": "../../../images/2015/p4/q/q49.png"
+    "question": "../../../images/2015/p4/q/q49.png",
+    "answer": "c",
+    "type": "eff",
+    "difficulty": "m"
   },
   {
     "question_name": "15-4-50",
     "text": "../../../images/2015/p4/b/b50.1.png",
     "text-2": "../../../images/2015/p4/b/b50.2.png",
-    "question": "../../../images/2015/p4/q/q50.png"
+    "question": "../../../images/2015/p4/q/q50.png",
+    "answer": "e",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "15-4-51",
     "text": "../../../images/2015/p4/b/b51.png",
-    "question": "../../../images/2015/p4/q/q51.png"
+    "question": "../../../images/2015/p4/q/q51.png",
+    "answer": "a",
+    "type": "sen-fun",
+    "difficulty": "e"
   },
   {
     "question_name": "15-4-52",
     "text": "../../../images/2015/p4/b/b52.png",
-    "question": "../../../images/2015/p4/q/q52.png"
+    "question": "../../../images/2015/p4/q/q52.png",
+    "answer": "a",
+    "type": "tone",
+    "difficulty": "e"
   },
   {
     "question_name": "15-4-53",
     "text": "../../../images/2015/p4/b/b53.png",
-    "question": "../../../images/2015/p4/q/q53.png"
+    "question": "../../../images/2015/p4/q/q53.png",
+    "answer": "b",
+    "type": "tone",
+    "difficulty": "m"
   },
   {
     "question_name": "15-4-54",
     "text": "../../../images/2015/p4/b/b54.png",
-    "question": "../../../images/2015/p4/q/q54.png"
+    "question": "../../../images/2015/p4/q/q54.png",
+    "answer": "e",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "15-4-55",
     "text": "../../../images/2015/p4/b/b55.1.png",
     "text-2": "../../../images/2015/p4/b/b55.2.png",
-    "question": "../../../images/2015/p4/q/q55.png"
+    "question": "../../../images/2015/p4/q/q55.png",
+    "answer": "a",
+    "type": "eff",
+    "difficulty": "e"
   },
 
   
@@ -614,78 +937,120 @@
   {
     "question_name": "14-1-1",
     "text": "../../../images/2014/p1/b/b1.png",
-    "question": "../../../images/2014/p1/q/q1.png"
+    "question": "../../../images/2014/p1/q/q1.png",
+    "answer": "c",
+    "type": "gram",
+    "difficulty": "m"
   },
   {
     "question_name": "14-1-2",
     "text": "../../../images/2014/p1/b/b2.png",
-    "question": "../../../images/2014/p1/q/q2.png"
+    "question": "../../../images/2014/p1/q/q2.png",
+    "answer": "d",
+    "type": "par-fun",
+    "difficulty": "e"
   },
   {
     "question_name": "14-1-3",
     "text": "../../../images/2014/p1/b/b3.png",
-    "question": "../../../images/2014/p1/q/q3.png"
+    "question": "../../../images/2014/p1/q/q3.png",
+    "answer": "e",
+    "type": "dic",
+    "difficulty": "m"
   },
   {
     "question_name": "14-1-4",
     "text": "../../../images/2014/p1/b/b4.png",
-    "question": "../../../images/2014/p1/q/q4.png"
+    "question": "../../../images/2014/p1/q/q4.png",
+    "answer": "d",
+    "type": "gram",
+    "difficulty": "e"
   },
   {
     "question_name": "14-1-5",
     "text": "../../../images/2014/p1/b/b5.png",
-    "question": "../../../images/2014/p1/q/q5.png"
+    "question": "../../../images/2014/p1/q/q5.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "h"
   },
   {
     "question_name": "14-1-6",
     "text": "../../../images/2014/p1/b/b6.1.png",
     "text-2": "../../../images/2014/p1/b/b6.2.png",
-    "question": "../../../images/2014/p1/q/q6.png"
+    "question": "../../../images/2014/p1/q/q6.png",
+    "answer": "d",
+    "type": "strat",
+    "difficulty": "m"
   },
   {
     "question_name": "14-1-7",
     "text": "../../../images/2014/p1/b/b7.png",
-    "question": "../../../images/2014/p1/q/q7.png"
+    "question": "../../../images/2014/p1/q/q7.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "14-1-8",
     "text": "../../../images/2014/p1/b/b8.1.png",
     "text-2": "../../../images/2014/p1/b/b8.2.png",
-    "question": "../../../images/2014/p1/q/q8.png"
+    "question": "../../../images/2014/p1/q/q8.png",
+    "answer": "a",
+    "type": "eff",
+    "difficulty": "e"
   },
   {
     "question_name": "14-1-9",
     "text": "../../../images/2014/p1/b/b9.png",
-    "question": "../../../images/2014/p1/q/q9.png"
+    "question": "../../../images/2014/p1/q/q9.png",
+    "answer": "e",
+    "type": "sen-fun",
+    "difficulty": "h"
   },
   {
     "question_name": "14-1-10",
     "text": "../../../images/2014/p1/b/b10.png",
-    "question": "../../../images/2014/p1/q/q10.png"
+    "question": "../../../images/2014/p1/q/q10.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-1-11",
     "text": "../../../images/2014/p1/b/b11.1.png",
     "text-2": "../../../images/2014/p1/b/b11.2.png",
-    "question": "../../../images/2014/p1/q/q11.png"
+    "question": "../../../images/2014/p1/q/q11.png",
+    "answer": "b",
+    "type": "sen-fun",
+    "difficulty": "m"
   },
   {
     "question_name": "14-1-12",
     "text": "../../../images/2014/p1/b/b12.1.png",
     "text-2": "../../../images/2014/p1/b/b12.2.png",
-    "question": "../../../images/2014/p1/q/q12.png"
+    "question": "../../../images/2014/p1/q/q12.png",
+    "answer": "e",
+    "type": "eff",
+    "difficulty": "e"
   },
   {
     "question_name": "14-1-13",
     "text": "../../../images/2014/p1/b/b13.1.png",
     "text-2": "../../../images/2014/p1/b/b13.2.png",
-    "question": "../../../images/2014/p1/q/q13.png"
+    "question": "../../../images/2014/p1/q/q13.png",
+    "answer": "b",
+    "type": "tone",
+    "difficulty": "m"
   },
   {
     "question_name": "14-1-14",
     "text": "../../../images/2014/p1/b/b14.1.png",
     "text-2": "../../../images/2014/p1/b/b14.2.png",
-    "question": "../../../images/2014/p1/q/q14.png"
+    "question": "../../../images/2014/p1/q/q14.png",
+    "answer": "b",
+    "type": "summ",
+    "difficulty": "e"
   },
 
 
@@ -697,80 +1062,125 @@
     "question_name": "14-2-15",
     "text": "../../../images/2014/p2/b/b15.1.png",
     "text-2": "../../../images/2014/p2/b/b15.2.png",
-    "question": "../../../images/2014/p2/q/q15.png"
+    "question": "../../../images/2014/p2/q/q15.png",
+    "answer": "b",
+    "type": "summ",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-16",
     "text": "../../../images/2014/p2/b/b16.1.png",
     "text-2": "../../../images/2014/p2/b/b16.2.png",
-    "question": "../../../images/2014/p2/q/q16.png"
+    "question": "../../../images/2014/p2/q/q16.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "14-2-17",
     "text": "../../../images/2014/p2/b/b17.png",
-    "question": "../../../images/2014/p2/q/q17.png"
+    "question": "../../../images/2014/p2/q/q17.png",
+    "answer": "b",
+    "type": "strat",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-18",
     "text": "../../../images/2014/p2/b/b18.1.png",
     "text-2": "../../../images/2014/p2/b/b18.2.png",
-    "question": "../../../images/2014/p2/q/q18.png"
+    "question": "../../../images/2014/p2/q/q18.png",
+    "answer": "a",
+    "type": "foot",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-19",
     "text": "../../../images/2014/p2/b/b19.png",
-    "question": "../../../images/2014/p2/q/q19.png"
+    "question": "../../../images/2014/p2/q/q19.png",
+    "answer": "c",
+    "type": "dic",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-20",
     "text": "../../../images/2014/p2/b/b20.png",
-    "question": "../../../images/2014/p2/q/q20.png"
+    "question": "../../../images/2014/p2/q/q20.png",
+    "answer": "d",
+    "type": "sen-fun",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-21",
     "text": "../../../images/2014/p2/b/b21.png",
-    "question": "../../../images/2014/p2/q/q21.png"
+    "question": "../../../images/2014/p2/q/q21.png",
+    "answer": "d",
+    "type": "strat",
+    "difficulty": "m"
   },
   {
     "question_name": "14-2-22",
     "text": "../../../images/2014/p2/b/b22.png",
-    "question": "../../../images/2014/p2/q/q22.png"
+    "question": "../../../images/2014/p2/q/q22.png",
+    "answer": "e",
+    "type": "tone",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-23",
     "text": "../../../images/2014/p2/b/b23.png",
-    "question": "../../../images/2014/p2/q/q23.png"
+    "question": "../../../images/2014/p2/q/q23.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-24",
     "text": "../../../images/2014/p2/b/b24.png",
-    "question": "../../../images/2014/p2/q/q24.png"
+    "question": "../../../images/2014/p2/q/q24.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-25",
     "text": "../../../images/2014/p2/b/b25.png",
-    "question": "../../../images/2014/p2/q/q25.png"
+    "question": "../../../images/2014/p2/q/q25.png",
+    "answer": "d",
+    "type": "strat",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-26",
     "text": "../../../images/2014/p2/b/b26.png",
-    "question": "../../../images/2014/p2/q/q26.png"
+    "question": "../../../images/2014/p2/q/q26.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-27",
     "text": "../../../images/2014/p2/b/b27.1.png",
     "text-2": "../../../images/2014/p2/b/b27.2.png",
-    "question": "../../../images/2014/p2/q/q27.png"
+    "question": "../../../images/2014/p2/q/q27.png",
+    "answer": "e",
+    "type": "foot",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-28",
     "text": "../../../images/2014/p2/b/b28.png",
-    "question": "../../../images/2014/p2/q/q28.png"
+    "question": "../../../images/2014/p2/q/q28.png",
+    "answer": "a",
+    "type": "foot",
+    "difficulty": "e"
   },
   {
     "question_name": "14-2-29",
     "text": "../../../images/2014/p2/b/b29.png",
-    "question": "../../../images/2014/p2/q/q29.png"
+    "question": "../../../images/2014/p2/q/q29.png",
+    "answer": "c",
+    "type": "foot",
+    "difficulty": "e"
   },
 
 
@@ -782,77 +1192,119 @@
     "question_name": "14-3-30",
     "text": "../../../images/2014/p3/b/b30.1.png",
     "text-2": "../../../images/2014/p3/b/b30.2.png",
-    "question": "../../../images/2014/p3/q/q30.png"
+    "question": "../../../images/2014/p3/q/q30.png",
+    "answer": "c",
+    "type": "summ",
+    "difficulty": "m"
   },
   {
     "question_name": "14-3-31",
     "text": "../../../images/2014/p3/b/b31.1.png",
     "text-2": "../../../images/2014/p3/b/b31.2.png",
-    "question": "../../../images/2014/p3/q/q31.png"
+    "question": "../../../images/2014/p3/q/q31.png",
+    "answer": "a",
+    "type": "summ",
+    "difficulty": "m"
   },
   {
     "question_name": "14-3-32",
     "text": "../../../images/2014/p3/b/b32.png",
-    "question": "../../../images/2014/p3/q/q32.png"
+    "question": "../../../images/2014/p3/q/q32.png",
+    "answer": "d",
+    "type": "sen-fun",
+    "difficulty": "e"
   },
   {
     "question_name": "14-3-33",
     "text": "../../../images/2014/p3/b/b33.png",
-    "question": "../../../images/2014/p3/q/q33.png"
+    "question": "../../../images/2014/p3/q/q33.png",
+    "answer": "a",
+    "type": "dev",
+    "difficulty": "e"
   },
   {
     "question_name": "14-3-34",
     "text": "../../../images/2014/p3/b/b34.png",
-    "question": "../../../images/2014/p3/q/q34.png"
+    "question": "../../../images/2014/p3/q/q34.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "14-3-35",
     "text": "../../../images/2014/p3/b/b35.png",
-    "question": "../../../images/2014/p3/q/q35.png"
+    "question": "../../../images/2014/p3/q/q35.png",
+    "answer": "e",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-3-36",
     "text": "../../../images/2014/p3/b/b36.png",
-    "question": "../../../images/2014/p3/q/q36.png"
+    "question": "../../../images/2014/p3/q/q36.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "14-3-37",
     "text": "../../../images/2014/p3/b/b37.png",
-    "question": "../../../images/2014/p3/q/q37.png"
+    "question": "../../../images/2014/p3/q/q37.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-3-38",
     "text": "../../../images/2014/p3/b/b38.png",
     "text-2": "../../../images/2014/p3/b/b38.png",
-    "question": "../../../images/2014/p3/q/q38.png"
+    "question": "../../../images/2014/p3/q/q38.png",
+    "answer": "e",
+    "type": "tone",
+    "difficulty": "e"
   },
   {
     "question_name": "14-3-39",
     "text": "../../../images/2014/p3/b/b39.png",
     "text-2": "../../../images/2014/p3/b/b39.png",
-    "question": "../../../images/2014/p3/q/q39.png"
+    "question": "../../../images/2014/p3/q/q39.png",
+    "answer": "d",
+    "type": "strat",
+    "difficulty": "m"
   },
   {
     "question_name": "14-3-40",
     "text": "../../../images/2014/p3/b/b40.1.png",
     "text-2": "../../../images/2014/p3/b/b40.2.png",
-    "question": "../../../images/2014/p3/q/q40.png"
+    "question": "../../../images/2014/p3/q/q40.png",
+    "answer": "e",
+    "type": "tone",
+    "difficulty": "m"
   },
   {
     "question_name": "14-3-41",
     "text": "../../../images/2014/p3/b/b41.1.png",
     "text-2": "../../../images/2014/p3/b/b41.2.png",
-    "question": "../../../images/2014/p3/q/q41.png"
+    "question": "../../../images/2014/p3/q/q41.png",
+    "answer": "d",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-3-42",
     "text": "../../../images/2014/p3/b/b42.png",
-    "question": "../../../images/2014/p3/q/q42.png"
+    "question": "../../../images/2014/p3/q/q42.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-3-43",
     "text": "../../../images/2014/p3/b/b43.png",
-    "question": "../../../images/2014/p3/q/q43.png"
+    "question": "../../../images/2014/p3/q/q43.png",
+    "answer": "b",
+    "type": "sen-fun",
+    "difficulty": "m"
   },
 
 
@@ -863,63 +1315,99 @@
   {
     "question_name": "14-4-44",
     "text": "../../../images/2014/p4/b/b44.png",
-    "question": "../../../images/2014/p4/q/q44.png"
+    "question": "../../../images/2014/p4/q/q44.png",
+    "answer": "e",
+    "type": "dic",
+    "difficulty": "e"
   },
   {
     "question_name": "14-4-45",
     "text": "../../../images/2014/p4/b/b45.png",
-    "question": "../../../images/2014/p4/q/q45.png"
+    "question": "../../../images/2014/p4/q/q45.png",
+    "answer": "c",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-4-46",
     "text": "../../../images/2014/p4/b/b46.png",
-    "question": "../../../images/2014/p4/q/q46.png"
+    "question": "../../../images/2014/p4/q/q46.png",
+    "answer": "a",
+    "type": "tone",
+    "difficulty": "e"
   },
   {
     "question_name": "14-4-47",
     "text": "../../../images/2014/p4/b/b47.png",
-    "question": "../../../images/2014/p4/q/q47.png"
+    "question": "../../../images/2014/p4/q/q47.png",
+    "answer": "e",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-4-48",
     "text": "../../../images/2014/p4/b/b48.png",
-    "question": "../../../images/2014/p4/q/q48.png"
+    "question": "../../../images/2014/p4/q/q48.png",
+    "answer": "a",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "14-4-49",
     "text": "../../../images/2014/p4/b/b49.1.png",
     "text-2": "../../../images/2014/p4/b/b49.2.png",
-    "question": "../../../images/2014/p4/q/q49.png"
+    "question": "../../../images/2014/p4/q/q49.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "14-4-50",
     "text": "../../../images/2014/p4/b/b50.png",
-    "question": "../../../images/2014/p4/q/q50.png"
+    "question": "../../../images/2014/p4/q/q50.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-4-51",
     "text": "../../../images/2014/p4/b/b51.png",
-    "question": "../../../images/2014/p4/q/q51.png"
+    "question": "../../../images/2014/p4/q/q51.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "m"
   },
   {
     "question_name": "14-4-52",
     "text": "../../../images/2014/p4/b/b52.png",
-    "question": "../../../images/2014/p4/q/q52.png"
+    "question": "../../../images/2014/p4/q/q52.png",
+    "answer": "e",
+    "type": "eff",
+    "difficulty": "e"
   },
   {
     "question_name": "14-4-53",
     "text": "../../../images/2014/p4/b/b53.png",
-    "question": "../../../images/2014/p4/q/q53.png"
+    "question": "../../../images/2014/p4/q/q53.png",
+    "answer": "b",
+    "type": "comp",
+    "difficulty": "e"
   },
   {
     "question_name": "14-4-54",
     "text": "../../../images/2014/p4/b/b54.png",
-    "question": "../../../images/2014/p4/q/q54.png"
+    "question": "../../../images/2014/p4/q/q54.png",
+    "answer": "e",
+    "type": "tone",
+    "difficulty": "e"
   },
   {
     "question_name": "14-4-55",
     "text": "../../../images/2014/p4/b/b55.png",
-    "question": "../../../images/2014/p4/q/q55.png"
+    "question": "../../../images/2014/p4/q/q55.png",
+    "answer": "a",
+    "type": "summ",
+    "difficulty": "e"
   }
 
 ]

@@ -75,8 +75,17 @@ module.exports = function(app, passport) {
  
   app.post('/api/subject/:name', function(req, res) {
     let email = req.body.email;
-    console.log(req.params.name, req.body);
     helpers.getMaterial(email, function(data) {
+      res.json(data);
+    });
+  });
+
+  app.post('/api/subject/:name/:questionname', function(req, res) {
+    let questionName = req.params.questionname;
+    let email = req.body.email;
+    let subject = req.params.name;
+
+    helpers.updateUserMaterial(email, subject, questionName, function(data) {
       res.json(data);
     });
   });
