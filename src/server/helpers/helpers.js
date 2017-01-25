@@ -124,19 +124,6 @@ module.exports = {
         });
       }
     });
-
-
-     // subjects: [
-    //   { 
-    //     subject_name: String,
-    //     reviewed: [
-    //       question_name: String,
-    //       correct: Boolean,
-    //       difficulty: String,
-    //       type: String
-    //     ]
-    //   }
-    // ]
   },
 
   updateUserMaterial: function(email, subject, question, cb) {
@@ -163,10 +150,6 @@ module.exports = {
           }
         });
         
-       
-        
-
-
         user.save(function (err) {
           if(err) return console.error(err);
 

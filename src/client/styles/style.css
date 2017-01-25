@@ -366,6 +366,11 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 20px 0 20px 0;
+}
+
+.material-text, .material-question {
+  margin: 10px 0 10px 0;
 }
 
 .material-answer-choices {
@@ -376,7 +381,7 @@ html, body {
   margin: 20px 0 20px 0;
 }
 
-.material-choice {
+.answer-choice {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -384,4 +389,49 @@ html, body {
   height: 50px;
   margin: 0 10px 0 10px;
   background-color: aliceblue;
+  cursor: pointer;
+}
+
+.answer-choice-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px 0 10px;
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.material-picked {
+  background-color: red;
+}
+
+.material-submit-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+.material-submit-btn, .material-skip-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 170px;
+  width: 15vw;
+  height: 30px;
+  font-size: 16px;
+  font-family: 'Copperplate Gothic Light, sans-serif';
+  background-color: #7aacd2;
+  border-radius: 5px;
+  margin: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.material-submit-btn:hover, .material-skip-btn:hover {
+  background-color: #1B82D1;
 }

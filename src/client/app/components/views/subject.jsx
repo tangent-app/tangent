@@ -10,9 +10,12 @@ class Subject extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: ''
+      data: '',
+      answer: null,
+      activeIndex: null
     };
     this._handleSubmit = this._handleSubmit.bind(this);
+    this._handleAnswerChoice = this._handleAnswerChoice.bind(this);
   }
 
   componentWillMount() {
@@ -28,13 +31,22 @@ class Subject extends Component {
   }
 
   _handleSubmit() {
-    axios.post('/api/subject/' + this.props.routeParams.subject + '/' + this.state.data[0].question_name, { email: localStorage.getItem('email') })
+    axios.post('/api/subject/' + this.props.routeParams.subject + '/' + this.state.data[0].question_name, 
+      { 
+        email: localStorage.getItem('email') 
+      }
+    )
     .then((res) => {
       console.log('answer submitted', res);
     })
     .catch((err) => {
       return console.log(err);
     });
+  }
+
+  _handleAnswerChoice(index) {
+    console.log(index);
+    this.setState({activeIndex: index})
   }
 
 /* 
@@ -83,11 +95,11 @@ class Subject extends Component {
             <img src={ this.state.data[0] ? this.state.data[0].question : null } />
           </div>
           <div className='material-answer-choices'>
-            <div className='material-choice'>A</div>
-            <div className='material-choice'>B</div>
-            <div className='material-choice'>C</div>
-            <div className='material-choice'>D</div>
-            <div className='material-choice'>E</div>
+            <AnswerChoice choice='a' index={0} isActive={ this.state.activeIndex === 0} onClick={ this._handleAnswerChoice.bind(this) } />
+            <AnswerChoice choice='b' index={1} isActive={ this.state.activeIndex === 1} onClick={ this._handleAnswerChoice.bind(this) } />
+            <AnswerChoice choice='c' index={2} isActive={ this.state.activeIndex === 2} onClick={ this._handleAnswerChoice.bind(this) } />
+            <AnswerChoice choice='d' index={3} isActive={ this.state.activeIndex === 3} onClick={ this._handleAnswerChoice.bind(this) } />
+            <AnswerChoice choice='e' index={4} isActive={ this.state.activeIndex === 4} onClick={ this._handleAnswerChoice.bind(this) } />
           </div>
           <div className='material-submit-container'>
             <div className='material-submit-btn' onClick={ this._handleSubmit } >Submit</div>
@@ -100,4 +112,20 @@ class Subject extends Component {
   }
 }
 
+
+class AnswerChoice extends Component {
+
+  _handleClick() {
+    this.props.onClick(this.props.index)
+  }
+
+
+  render() {
+    return (
+      <div className={ this.props.isActive ? 'answer-choice-active' : 'answer-choice' } name='e' onClick={this._handleClick.bind(this)}> { this.props.isActive ? <i className="fa fa-check fa-2x" aria-hidden="true"></i> : this.props.choice } </div>
+    );
+    
+  }
+
+}
 export default Subject;
