@@ -126,7 +126,16 @@ module.exports = {
     });
   },
 
-  updateUserMaterial: function(email, subject, question, cb) {
+  updateUserMaterial: function(questionData, subject, question, cb) {
+    let email = questionData.email;
+    let answerChoice = questionData.answer;
+    let category = questionData.category;
+    let difficulty = questionData.difficulty;
+    let questionType = questionData.type;
+    let submittedTime = questionData.submitted_time;
+
+    console.log('asdfsadf', questionData);
+
     Users.findOne({ email: email }, function(err, user) {
       if(err) return console.error(err);
       else {
@@ -138,13 +147,16 @@ module.exports = {
 
         
         user.subjects.forEach(function(data) {
-          console.log(data);
           if(data.subject_name === subject) {
             if(data.reviewed.length < 1) data.reviewed.push({ question_name: question });
 
             if(data.reviewed[data.reviewed.length - 1].question_name !== question) {
               data.reviewed.push({
                 question_name: question,
+                answer: answerChoice,
+                type: questionType,
+                difficulty: difficulty,
+                submitted_time: submittedTime
               });
             }
           }
@@ -154,7 +166,6 @@ module.exports = {
           if(err) return console.error(err);
 
           else {
-            console.log(user);
             return cb(user);
           } 
         });

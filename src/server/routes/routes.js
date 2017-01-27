@@ -1,6 +1,6 @@
 'use strict';
 
-var helpers = require('../helpers/helpers');
+const helpers = require('../helpers/helpers');
 
 module.exports = function(app, passport) {
 
@@ -82,10 +82,10 @@ module.exports = function(app, passport) {
 
   app.post('/api/subject/:name/:questionname', function(req, res) {
     let questionName = req.params.questionname;
-    let email = req.body.email;
     let subject = req.params.name;
+    let questionData = req.body;
 
-    helpers.updateUserMaterial(email, subject, questionName, function(data) {
+    helpers.updateUserMaterial(questionData, subject, questionName, function(data) {
       res.json(data);
     });
   });
