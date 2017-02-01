@@ -11,26 +11,14 @@ class Profile extends Component {
     this.state = {
       name: '',
     }
+
+    this._handleLogout = this._handleLogout.bind(this);
   }
 
-  componentWillMount() {
-    axios.get('/api/profile')
-    .then((res) => {
-      console.log('res', res);
-      if(!res.data) window.location = '/login';
-      else {
-        localStorage.setItem('email', res.data.email);
-        localStorage.setItem('token', res.data.token);
-        this.setState({
-          name: res.data.first_name + ' ' + res.data.last_name,
-          email: res.data.email
-        });
-      }
-     
-    })
-    .catch(function(err) {
-      console.log(err);
-    });
+  _handleLogout() {
+    localStorage.removeItem('email');
+    localStorage.removeItem('token');
+    this.props.router.push('/');
   }
 
   render() {
@@ -38,7 +26,7 @@ class Profile extends Component {
       <div>
         <AuthNavbar />
         <h3>Profile page</h3>
-        <div> Logout </div>
+        <div onClick={ this._handleLogout }> Logout </div>
       </div>
     )
   }

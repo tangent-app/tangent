@@ -18,6 +18,35 @@ class Subjects extends Component {
     this._handleRoute = this._handleRoute.bind(this);
   }
 
+
+  componentWillMount() {
+
+    if( !localStorage.getItem('email') && !localStorage.getItem('token') ) {
+      axios.get('/api/profile')
+      .then((res) => {
+        console.log('res', res);
+        if(!res.data) window.location = '/login';
+        else {
+          localStorage.setItem('email', res.data.email);
+          localStorage.setItem('token', res.data.token);
+          this.setState({
+            name: res.data.first_name + ' ' + res.data.last_name,
+            email: res.data.email
+          });
+        }
+       
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+    }
+    else if(localStorage.getItem('email') === 'undefined' && localStorage.getItem('token') ==='undefined' ) {
+      window.location = '/login';
+    }
+    
+  }
+
+
   _handleChange(e) {
     var search = new RegExp(e.target.value, 'gi');
     var filtered = subjects.filter((subject) => {

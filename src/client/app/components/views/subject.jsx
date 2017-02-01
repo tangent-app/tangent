@@ -18,8 +18,6 @@ class Subject extends Component {
     };
     this._handleSubmit = this._handleSubmit.bind(this);
     this._handleAnswerChoice = this._handleAnswerChoice.bind(this);
-
-    console.log(this.props)
   }
 
   componentWillMount() {
@@ -33,38 +31,55 @@ class Subject extends Component {
 
   }
 
-  _handleSubmit() {
-    console.log('asdf', this.state.submittedTime);
-    axios.post('/api/subject/' + this.props.routeParams.subject + '/' + this.state.data[0].question_name, 
-      { 
-        email: localStorage.getItem('email'),
-        answer: this.state.answer,
-        difficulty: this.state.data[0].difficulty,
-        type: this.state.data[0].type,
-        submitted_time: this.state.submittedTime, 
-      }
-    )
-    .then((res) => {
-      console.log('answer submitted', res);
-      window.location ='/subjects/' + this.props.routeParams.subject;
-    })
-    .catch((err) => {
-      return console.log(err);
-    });
+  _handleSubmit(e) {
+    
+    if(e.target.innerText.toLowerCase() === 'skip') {
+      this.setState({ answer: null }, () => {
+        axios.post('/api/subject/' + this.props.routeParams.subject + '/' + this.state.data[0].question_name, 
+          { 
+            email: localStorage.getItem('email'),
+            answer: this.state.answer,
+            difficulty: this.state.data[0].difficulty,
+            type: this.state.data[0].type,
+            submitted_time: this.state.submittedTime, 
+          }
+        )
+        .then((res) => {
+          window.location ='/subjects/' + this.props.routeParams.subject;
+        })
+        .catch((err) => {
+          return console.log(err);
+        });
+      });
+    } 
+
+    else {
+      axios.post('/api/subject/' + this.props.routeParams.subject + '/' + this.state.data[0].question_name, 
+        { 
+          email: localStorage.getItem('email'),
+          answer: this.state.answer,
+          difficulty: this.state.data[0].difficulty,
+          type: this.state.data[0].type,
+          submitted_time: this.state.submittedTime, 
+        }
+      )
+      .then((res) => {
+        window.location ='/subjects/' + this.props.routeParams.subject;
+      })
+      .catch((err) => {
+        return console.log(err);
+      });
+    }
+    
   }
 
   _handleAnswerChoice(index, choice) {
     let answerChoice = choice.toLowerCase();
 
-    if(answerChoice === this.state.data[0].answer) {
-      this.setState({ answer: true });
-    } else {
-      this.setState({ answer: false});
-    }
+    if(answerChoice === this.state.data[0].answer) this.setState({ answer: true });
+    else this.setState({ answer: false});
       
-    this.setState({activeIndex: index})
-    
-    
+    this.setState({activeIndex: index})  
   }
 
  

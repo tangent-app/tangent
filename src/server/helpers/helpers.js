@@ -51,29 +51,35 @@ module.exports = {
 
   oAuthSignin: function(data, token, cb) {
 
-    let email = data.emails[0].val;
+    let email = data.emails[0].value;
 
     Users.findOne( { email: email }, function(err, user) {
       if(err) return console.error(err);
 
       let first_name = data.displayName.split(" ")[0];
       let last_name = data.displayName.split(" ")[1];
-      
+
       if(!user) {
         Users.create({
           oauth_id: data.id,
           first_name: first_name,
           last_name: last_name,
-          email: data.emails[0].value
-        }, function(err, data) {
-          console.log('dataaaa', data);
+          email: email,
+          token: token
+        }, function(err, newData) {
           if(err) return console.error(err);
-          else return cb({ user: data, token: token });
+          else return cb({ user: newData, token: token });
         });
       }
 
       else {
-        return cb(user);
+        let existingUserdata = {
+          oauth_id: data.id,
+          first_name: first_name,
+          last_name: last_name,
+          email: email
+        };
+        return cb({ user: existingUserdata, token: token });
       }
 
     });
@@ -101,7 +107,7 @@ module.exports = {
           if(err) return console.error(err);
           else {
             
-            if(user.subjects.length < 1) return cb(data);
+            if(user.subjects.length < 1 || !user.subjects) return cb(data);
 
             let reviewedData = [];
 
@@ -111,8 +117,6 @@ module.exports = {
               });
             });
 
-
-            console.log(reviewedData);
             let filteredData = data.filter(function(questions) {
               return reviewedData.indexOf(questions.question_name) < 0;
             });
@@ -134,8 +138,6 @@ module.exports = {
     let questionType = questionData.type;
     let submittedTime = questionData.submitted_time;
 
-    console.log('asdfsadf', questionData);
-
     Users.findOne({ email: email }, function(err, user) {
       if(err) return console.error(err);
       else {
@@ -148,7 +150,15 @@ module.exports = {
         
         user.subjects.forEach(function(data) {
           if(data.subject_name === subject) {
-            if(data.reviewed.length < 1) data.reviewed.push({ question_name: question });
+            if(data.reviewed.length < 1) {
+              data.reviewed.push({
+                question_name: question, 
+                answer: answerChoice,
+                type: questionType,
+                difficulty: difficulty,
+                submitted_time: submittedTime 
+              });
+            } 
 
             if(data.reviewed[data.reviewed.length - 1].question_name !== question) {
               data.reviewed.push({

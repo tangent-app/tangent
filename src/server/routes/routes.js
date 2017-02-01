@@ -11,7 +11,7 @@ module.exports = function(app, passport) {
       failureFlash : true
     }
   ), function(req, res) {
-    res.redirect('/profile');
+    res.redirect('/subjects');
   });
 
   app.get('/login/google', passport.authenticate('google', { scope: [ 'profile', 'email' ] }));
@@ -23,13 +23,14 @@ module.exports = function(app, passport) {
     }
   ), function(req, res) {
 
-    res.redirect('/profile');
+    res.redirect('/subjects');
   });
   
 
 
 
   app.get('/api/profile', function(req, res) {
+    console.log(req.user)
     if(!req.user) {
       res.json(false);
     }
@@ -47,7 +48,6 @@ module.exports = function(app, passport) {
   });
 
   app.post('/api/signin', function(req, res) {
-    console.log(req.body)
     let email = req.body.email;
     let password = req.body.password;
     
