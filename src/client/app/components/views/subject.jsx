@@ -78,7 +78,7 @@ class Subject extends Component {
 
     if(answerChoice === this.state.data[0].answer) this.setState({ answer: true });
     else this.setState({ answer: false});
-      
+        
     this.setState({activeIndex: index})  
   }
 

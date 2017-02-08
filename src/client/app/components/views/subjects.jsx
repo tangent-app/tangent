@@ -11,7 +11,8 @@ class Subjects extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      subjects: subjects
+      subjects: subjects,
+      searchValue: ''
     };
     this._handleChange = this._handleChange.bind(this);
     this._handleClick = this._handleClick.bind(this);
@@ -41,7 +42,7 @@ class Subjects extends Component {
       });
     }
     else if(localStorage.getItem('email') === 'undefined' && localStorage.getItem('token') ==='undefined' ) {
-      window.location = '/login';
+      this.props.router.push('/login');
     }
     
   }
@@ -53,7 +54,7 @@ class Subjects extends Component {
       return subject.subject_name.match(search);
     });
 
-    this.setState({ subjects: filtered });
+    this.setState({ subjects: filtered, searchValue: e.target.value });
   }
 
   _handleClick(e) {
@@ -67,15 +68,13 @@ class Subjects extends Component {
         return subject.category === text;
       });
 
-      this.setState({ subjects: filtered });
+      this.setState({ subjects: filtered, searchValue: '' });
     }
-    
-    var input = document.getElementById('filter-input');
-    input.value = '';
   }
 
   _handleRoute(subject) {
-    this.props.router.push('/subjects/' + subject);
+    window.location = '/subjects/' + subject;
+    // this.props.router.push('/subjects/' + subject);
   }
 
   render() {
@@ -92,7 +91,7 @@ class Subjects extends Component {
               <div className='subject-sort-btn' onClick={ this._handleClick } >Humanities</div>
               <div className='subject-sort-btn' onClick={ this._handleClick } >Sciences</div>
               <div className='subject-search'>
-                <input id='filter-input' className='subject-search-input' type='text' placeholder='search' onChange={ this._handleChange } />
+                <input id='filter-input' className='subject-search-input' value={ this.state.searchValue } type='text' placeholder='search' onChange={ this._handleChange } />
               </div>
             </div>
           </div>
