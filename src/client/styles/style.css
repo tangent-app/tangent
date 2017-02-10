@@ -435,3 +435,80 @@ html, body {
 .material-submit-btn:hover, .material-skip-btn:hover {
   background-color: #1B82D1;
 }
+
+/* Modal */
+
+.modal-toggle-show {
+  z-index: 9999999;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.modal-toggle-hide {
+  z-index: -999999;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -200px;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 5px;
+  width: 400px;
+  height: 200px;
+}
+
+.modal-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  max-width: 400px;
+
+}
+
+.modal-text {
+  font-weight: bold;
+}
+
+.modal-btn-container {
+  display: flex;
+  flex-direction: row;
+
+}
+.modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 70px;
+  height: 30px;
+  font-size: 16px;
+  font-family: 'Copperplate Gothic Light, sans-serif';
+  background-color: #7aacd2;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  background-color: #96B7D1; 
+}

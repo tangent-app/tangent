@@ -5,6 +5,7 @@ import axios from 'axios';
 import Navbar from './navbar.jsx';
 import Footer from './footer.jsx';
 
+
 class Subject extends Component {
   
   constructor(props) {

@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import AuthNavbar from './auth.navbar.jsx';
 import Footer from './footer.jsx';
+import Modal from './modal.jsx';
 import subjects from '../../../../sample-data/subjects.json';
 
 class Subjects extends Component {
@@ -12,11 +13,13 @@ class Subjects extends Component {
     super(props);
     this.state = {
       subjects: subjects,
-      searchValue: ''
+      searchValue: '',
+      showModal: 'modal-toggle-hide'
     };
     this._handleChange = this._handleChange.bind(this);
     this._handleClick = this._handleClick.bind(this);
     this._handleRoute = this._handleRoute.bind(this);
+    this._handleAddSubject = this._handleAddSubject.bind(this);
   }
 
 
@@ -72,6 +75,12 @@ class Subjects extends Component {
     }
   }
 
+  _handleAddSubject(subject) {
+    console.log('subject', subject);
+    this.setState({ showModal: 'modal-toggle-show' })
+
+  }
+
   _handleRoute(subject) {
     window.location = '/subjects/' + subject;
     // this.props.router.push('/subjects/' + subject);
@@ -101,7 +110,7 @@ class Subjects extends Component {
                 return (
                   <div className='subject-card' key={ subject.key }> 
                     <div className='subject-card-btn-container'>
-                      <i className="fa fa-plus-circle fa-2x subject-card-btn" aria-hidden="true"></i>
+                      <AddSubjectButton subject={ subject.key } onClick={ this._handleAddSubject.bind(this) } aria-hidden="true" />
                     </div>
                     <div className='subject-card-text' onClick={ this._handleRoute.bind(this, subject.key) }> { subject.subject_name } </div>
                   </div>
@@ -111,8 +120,22 @@ class Subjects extends Component {
           </div>
         </div>
         <Footer />
+        <Modal showModal={ this.state.showModal } />
       </div>
     )
+  }
+}
+
+class AddSubjectButton extends Component {
+
+  _handleAddSubject() {
+    this.props.onClick(this.props.subject)
+  }
+
+  render() {
+    return (
+      <i className="fa fa-plus-circle fa-2x subject-card-btn" onClick={ this._handleAddSubject.bind(this) } aria-hidden="true"></i>
+    );
   }
 }
 
